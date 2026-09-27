@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="be">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Паэтонімы пісьменнікаў Светлагоршчыны · Даследаванне: Соф'я Шах «Кругаспеў»</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230f1a4d'/%3E%3Cstop offset='.55' stop-color='%237c3aed'/%3E%3Cstop offset='1' stop-color='%23fb7185'/%3E%3C/linearGradient%3E%3ClinearGradient id='s' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%23fde68a'/%3E%3Cstop offset='1' stop-color='%23fbbf24'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ccircle cx='50' cy='14' r='5' fill='url(%23s)' opacity='.9'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' font-weight='bold' text-anchor='middle' fill='white'%3EП%3C/text%3E%3Cpath d='M18 50 Q32 45 46 50' stroke='url(%23s)' stroke-width='3' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230f1a4d'/%3E%3Cstop offset='.55' stop-color='%237c3aed'/%3E%3Cstop offset='1' stop-color='%23fb7185'/%3E%3C/linearGradient%3E%3ClinearGradient id='s' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%23fde68a'/%3E%3Cstop offset='1' stop-color='%23fbbf24'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ccircle cx='50' cy='14' r='5' fill='url(%23s)' opacity='.9'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' font-weight='bold' text-anchor='middle' fill='white'%3EП%3C/text%3E%3Cpath d='M18 50 Q32 45 46 50' stroke='url(%23s)' stroke-width='3' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#0f1a4d">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700&family=Inter:wght@300;400;500;600;700;800&family=Marck+Script&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#070d2b;
+    --deep:#0f1a4d;
+    --violet:#7c3aed;
+    --sky:#7dd3fc;
+    --gold:#fbbf24;
+    --coral:#fb7185;
+    --cream:#fff8ec;
+  }
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',sans-serif;background:#070d2b;color:#eef2ff;overflow-x:hidden}
+  .serif{font-family:'Playfair Display',serif}
+  .script{font-family:'Marck Script',cursive}
+  ::selection{background:#fbbf24;color:#0f1a4d}
+  ::-webkit-scrollbar{width:10px}
+  ::-webkit-scrollbar-track{background:#0a1030}
+  ::-webkit-scrollbar-thumb{background:linear-gradient(#7c3aed,#fbbf24);border-radius:99px}
+
+  /* HERO blobs */
+  .blob{position:absolute;border-radius:9999px;filter:blur(90px);opacity:.55;pointer-events:none;will-change:transform}
+  @keyframes drift1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(60px,-40px) scale(1.15)}}
+  @keyframes drift2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-70px,50px) scale(1.1)}}
+  @keyframes drift3{0%,100%{transform:translate(0,0) rotate(0)}50%{transform:translate(30px,60px) scale(1.2)}}
+  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+  @keyframes spinSlow{to{transform:rotate(360deg)}}
+  @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  .marquee-track{animation:marquee 28s linear infinite}
+  /* слова-капсула дня: плаўная змена */
+  #wordOfDay,#wordOfDayMean{transition:opacity .55s ease,transform .55s cubic-bezier(.16,1,.3,1),filter .55s ease;will-change:opacity,transform,filter}
+  #wordOfDay{display:inline-block;min-height:1.2em}
+  .word-swap{opacity:0!important;transform:translateY(14px);filter:blur(8px)}
+  .grain::after{
+    content:"";position:absolute;inset:0;pointer-events:none;opacity:.14;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .glass{background:rgba(255,255,255,.07);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.14)}
+  .glass-strong{background:rgba(15,22,70,.72);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border:1px solid rgba(255,255,255,.12)}
+  .gold-text{background:linear-gradient(100deg,#fde68a 0%,#fbbf24 30%,#fb7185 65%,#fde68a 100%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite}
+  @keyframes shine{to{background-position:200% center}}
+  .hero-grid{
+    background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);
+    background-size:56px 56px;
+    mask-image:radial-gradient(ellipse 80% 70% at 50% 30%,black 40%,transparent 75%);
+    -webkit-mask-image:radial-gradient(ellipse 80% 70% at 50% 30%,black 40%,transparent 75%);
+  }
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(36px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
+  .reveal.visible{opacity:1;transform:none}
+  .reveal-delay-1{transition-delay:.12s}.reveal-delay-2{transition-delay:.24s}.reveal-delay-3{transition-delay:.36s}
+  /* cards */
+  .hover-lift{transition:transform .5s cubic-bezier(.16,1,.3,1),box-shadow .5s,border-color .5s}
+  .hover-lift:hover{transform:translateY(-8px)}
+  .card-glow{position:relative;overflow:hidden}
+  .card-glow::before{content:"";position:absolute;inset:0;background:radial-gradient(600px circle at var(--mx,50%) var(--my,50%),rgba(251,191,36,.14),transparent 45%);opacity:0;transition:opacity .4s;pointer-events:none}
+  .card-glow:hover::before{opacity:1}
+  /* tabs */
+  .tab-btn{transition:all .35s}
+  .tab-btn.active{background:linear-gradient(135deg,#fbbf24,#fb7185);color:#0f1a4d!important;border-color:transparent!important;box-shadow:0 12px 32px -8px rgba(251,113,133,.5)}
+  .tab-panel{display:none}
+  .tab-panel.active{display:block;animation:fadeUp .55s cubic-bezier(.16,1,.3,1)}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+  /* dictionary */
+  .dict-row{transition:background .25s,transform .25s}
+  .dict-row:hover{background:rgba(251,191,36,.08)!important}
+  /* bar */
+  .bar-fill{width:0;transition:width 1.6s cubic-bezier(.16,1,.3,1)}
+  .visible .bar-fill{width:var(--w)}
+  /* ornament */
+  .ornament{height:1px;background:linear-gradient(90deg,transparent,rgba(251,191,36,.6),transparent)}
+  .sonnet-frame{position:relative}
+  .sonnet-frame::before,.sonnet-frame::after{content:"❦";position:absolute;top:50%;transform:translateY(-50%);color:rgba(251,191,36,.5);font-size:1.4rem}
+  .sonnet-frame::before{left:-8px}.sonnet-frame::after{right:-8px}
+  #particles{position:absolute;inset:0;pointer-events:none}
+  .nav-link{position:relative}
+  .nav-link::after{content:"";position:absolute;left:0;bottom:-4px;height:2px;width:0;background:linear-gradient(90deg,#fbbf24,#fb7185);transition:width .3s;border-radius:99px}
+  .nav-link:hover::after{width:100%}
+  .chip{transition:all .3s}
+  .chip:hover{transform:translateY(-3px) scale(1.03)}
+  .num-outline{-webkit-text-stroke:1.5px rgba(251,191,36,.45);color:transparent}
+  @media(max-width:640px){.sonnet-frame::before,.sonnet-frame::after{display:none}}
+</style>
+</head>
+<body class="antialiased">
+
+<!-- progress -->
+<div id="progress" class="fixed top-0 left-0 h-[3px] z-[100] w-0" style="background:linear-gradient(90deg,#7dd3fc,#7c3aed,#fbbf24,#fb7185)"></div>
+
+<!-- NAV -->
+<header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="mt-3 rounded-2xl glass-strong px-4 sm:px-6 py-3 flex items-center justify-between gap-3 shadow-2xl shadow-black/30">
+      <a href="#hero" class="flex items-center gap-3 group">
+        <span class="w-10 h-10 rounded-xl grid place-items-center font-black serif text-lg shrink-0" style="background:linear-gradient(135deg,#7c3aed,#fb7185 60%,#fbbf24);box-shadow:0 8px 24px -6px rgba(124,58,237,.6)">К</span>
+        <span class="leading-tight">
+          <span class="block serif font-bold text-[15px] sm:text-base tracking-wide">ПАЭТОНІМЫ <span class="hidden sm:inline text-amber-300/90 font-normal italic">· Светлагоршчына</span></span>
+          <span class="block text-[11px] uppercase tracking-[0.22em] text-sky-200/70">Соф'я Шах · «Кругаспеў» · першы крок</span>
+        </span>
+      </a>
+      <nav class="hidden lg:flex items-center gap-6 text-[13.5px] font-medium text-slate-200">
+        <a href="#aktualnasc" class="nav-link hover:text-amber-300">Актуальнасць</a>
+        <a href="#mety" class="nav-link hover:text-amber-300">Мэты</a>
+        <a href="#metady" class="nav-link hover:text-amber-300">Метады</a>
+        <a href="#vyniki" class="nav-link hover:text-amber-300">Лічбы</a>
+        <a href="#sposaby" class="nav-link hover:text-amber-300">Словаўтварэнне</a>
+        <a href="#slounik" class="nav-link hover:text-amber-300">Слоўнік</a>
+        <a href="#maisternia" class="nav-link hover:text-amber-300">Майстэрня</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="#slounik" class="hidden sm:inline-flex items-center gap-2 text-[13px] font-semibold px-4 py-2.5 rounded-xl text-[#0f1a4d] hover:scale-[1.03] transition" style="background:linear-gradient(135deg,#fde68a,#fbbf24 50%,#fb923c)"><i class="fa-solid fa-book-open"></i> Слоўнік</a>
+        <button id="burger" class="lg:hidden w-10 h-10 grid place-items-center rounded-xl bg-white/10 border border-white/15"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="lg:hidden hidden mt-2 rounded-2xl glass-strong p-4 grid gap-1 text-[15px] font-medium">
+      <a href="#aktualnasc" class="px-3 py-2.5 rounded-xl hover:bg-white/10">Актуальнасць і навізна</a>
+      <a href="#mety" class="px-3 py-2.5 rounded-xl hover:bg-white/10">Мэты і задачы</a>
+      <a href="#metady" class="px-3 py-2.5 rounded-xl hover:bg-white/10">Метады</a>
+      <a href="#vyniki" class="px-3 py-2.5 rounded-xl hover:bg-white/10">Вынікі аналізу</a>
+      <a href="#sposaby" class="px-3 py-2.5 rounded-xl hover:bg-white/10">Спосабы словаўтварэння</a>
+      <a href="#semantyka" class="px-3 py-2.5 rounded-xl hover:bg-white/10">Семантыка</a>
+      <a href="#slounik" class="px-3 py-2.5 rounded-xl hover:bg-white/10">Слоўнік</a>
+      <a href="#maisternia" class="px-3 py-2.5 rounded-xl hover:bg-white/10">Майстэрня</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero" class="relative min-h-screen flex items-center overflow-hidden grain" style="background:radial-gradient(1200px 600px at 15% 10%,#2a1a7a 0%,transparent 60%),radial-gradient(1000px 600px at 90% 20%,#4c1d95 0%,transparent 55%),radial-gradient(900px 700px at 50% 110%,#9a3412 0%,transparent 55%),linear-gradient(180deg,#070d2b 0%,#0f1a4d 45%,#1e1b4b 75%,#312045 100%)">
+  <canvas id="particles"></canvas>
+  <div class="blob w-[520px] h-[520px] -left-40 top-10" style="background:#2563eb;animation:drift1 12s ease-in-out infinite"></div>
+  <div class="blob w-[460px] h-[460px] right-[-120px] top-[22%]" style="background:#7c3aed;animation:drift2 14s ease-in-out infinite"></div>
+  <div class="blob w-[620px] h-[380px] left-1/3 bottom-[-140px]" style="background:linear-gradient(90deg,#fb7185,#fbbf24);opacity:.38;animation:drift3 16s ease-in-out infinite"></div>
+  <div class="absolute inset-0 hero-grid"></div>
+
+  <!-- orbit deco -->
+  <div class="absolute right-[6%] top-[18%] hidden xl:block opacity-70 pointer-events-none">
+    <div class="relative w-[300px] h-[300px]">
+      <div class="absolute inset-0 rounded-full border border-white/15"></div>
+      <div class="absolute inset-8 rounded-full border border-dashed border-amber-300/30" style="animation:spinSlow 28s linear infinite"></div>
+      <div class="absolute inset-16 rounded-full border border-white/10"></div>
+      <div class="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-amber-300 shadow-[0_0_20px_6px_rgba(251,191,36,.6)]"></div>
+      <div class="absolute right-2 top-1/2 w-2 h-2 rounded-full bg-rose-300 shadow-[0_0_16px_4px_rgba(251,113,133,.6)]"></div>
+      <div class="absolute left-8 bottom-6 text-amber-200/80 serif italic text-sm">14 радкоў · вянок санетаў</div>
+    </div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 pt-32 pb-20 w-full">
+    <div class="grid lg:grid-cols-[1.15fr_.85fr] gap-10 items-center">
+      <div>
+        <p class="reveal visible text-[12px] sm:text-[13px] font-bold uppercase tracking-[0.3em] text-sky-200/90 mb-4"><span class="inline-block w-8 h-[2px] rounded-full align-middle mr-3" style="background:linear-gradient(90deg,#7dd3fc,#7c3aed)"></span>Даследаванне ў галіне лінгвістыкі</p>
+        <h1 class="reveal visible serif font-black leading-[1.02] text-[34px] sm:text-6xl xl:text-[68px]">
+          Паэтонімы<br>
+          <span class="gold-text">пісьменнікаў</span><br>
+          <span class="font-normal italic text-slate-100 text-[26px] sm:text-[36px] xl:text-[42px] leading-tight">Светлагоршчыны</span>
+        </h1>
+        <p class="reveal visible mt-5 flex items-center gap-3 text-[14px] sm:text-[16px] text-slate-100/95 font-medium max-w-2xl">
+          <span class="shrink-0 px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-[0.18em] text-[#0f1a4d]" style="background:linear-gradient(135deg,#fde68a,#fb7185)">Першы крок</span>
+          <span>аналіз зборніка санетаў Соф'і Шах <b class="serif italic text-amber-200">«Кругаспеў»</b> <span class="text-slate-300">· словаўтваральны і семантыка-стылістычны аспект</span></span>
+        </p>
+
+        <div class="reveal visible mt-7 glass rounded-2xl p-5 sm:p-6 relative overflow-hidden max-w-2xl">
+          <div class="absolute left-0 top-0 bottom-0 w-1" style="background:linear-gradient(#7dd3fc,#7c3aed,#fbbf24,#fb7185)"></div>
+          <div class="flex gap-4">
+            <div class="shrink-0 w-11 h-11 rounded-xl grid place-items-center text-xl" style="background:linear-gradient(135deg,#7c3aed,#fb7185)"><i class="fa-solid fa-quote-left text-white"></i></div>
+            <div>
+              <p class="serif italic text-[16px] sm:text-[19px] leading-relaxed text-slate-100">«Аказіяналізмы — гэта не выпадковыя словы, а дакладна вывераны інструмент, які дазваляе пераадолець жорсткія абмежаванні санетнай формы і стварыць шматмерны, сінэстэтычны свет».</p>
+              <p class="mt-2 text-[13px] text-amber-200/90 font-medium tracking-wide">— ключавая ідэя даследавання</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal visible mt-8 flex flex-wrap items-center gap-3">
+          <a href="#vyniki" class="group inline-flex items-center gap-3 px-7 py-4 rounded-2xl font-bold text-[#0f1a4d] text-[15px] hover:scale-[1.03] active:scale-95 transition shadow-2xl" style="background:linear-gradient(135deg,#fef3c7,#fbbf24 55%,#fb7185);box-shadow:0 20px 50px -12px rgba(251,191,36,.55)">
+            Даведацца больш <span class="w-8 h-8 rounded-full bg-[#0f1a4d] text-amber-300 grid place-items-center group-hover:translate-y-1 transition"><i class="fa-solid fa-arrow-down"></i></span>
+          </a>
+          <a href="#slounik" class="inline-flex items-center gap-2 px-6 py-4 rounded-2xl glass font-semibold text-[15px] hover:bg-white/15 transition"><i class="fa-solid fa-magnifying-glass text-amber-300"></i> Адкрыць слоўнік</a>
+        </div>
+
+        <div class="reveal visible mt-8 flex flex-wrap gap-6 sm:gap-8 text-center">
+          <div><div class="serif font-black text-3xl sm:text-4xl text-amber-300">38</div><div class="text-[12px] uppercase tracking-[0.18em] text-slate-300/80 mt-1">адзінак знойдзена</div></div>
+          <div class="w-px bg-white/15 hidden sm:block"></div>
+          <div><div class="serif font-black text-3xl sm:text-4xl text-sky-300">21</div><div class="text-[12px] uppercase tracking-[0.18em] text-slate-300/80 mt-1">вянок санетаў</div></div>
+          <div class="w-px bg-white/15 hidden sm:block"></div>
+          <div><div class="serif font-black text-3xl sm:text-4xl text-rose-300">47%</div><div class="text-[12px] uppercase tracking-[0.18em] text-slate-300/80 mt-1">складанне асноў</div></div>
+        </div>
+      </div>
+
+      <!-- hero card -->
+      <div class="reveal visible relative">
+        <div class="absolute -inset-4 rounded-[28px] opacity-60 blur-2xl" style="background:linear-gradient(135deg,rgba(124,58,237,.5),rgba(251,113,133,.35),rgba(251,191,36,.4))"></div>
+        <div class="relative z-10 glass-strong rounded-[24px] p-6 sm:p-8 overflow-hidden">
+          <div class="absolute top-0 left-0 right-0 h-1" style="background:linear-gradient(90deg,#7dd3fc,#7c3aed,#fbbf24,#fb7185)"></div>
+          <div class="flex items-center justify-between mb-5">
+            <span class="text-[11px] font-bold uppercase tracking-[0.24em] text-amber-300"><i class="fa-solid fa-feather-pointed mr-2"></i>Пашпарт работы</span>
+            <span class="text-[11px] px-2.5 py-1 rounded-full bg-emerald-400/15 text-emerald-300 border border-emerald-300/25 font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-emerald-300 inline-block mr-1 animate-pulse"></span>Даследаванне</span>
+          </div>
+          <h3 class="serif text-xl sm:text-2xl font-bold leading-snug">Як адно слова можа ўтрымаць колер, гук і пачуццё адначасова?</h3>
+          <div class="mt-5 grid gap-3 text-[14px]">
+            <div class="flex gap-3 items-start bg-white/[.06] border border-white/10 rounded-xl p-3.5"><span class="w-9 h-9 shrink-0 rounded-lg grid place-items-center" style="background:linear-gradient(135deg,#0ea5e9,#7c3aed)"><i class="fa-solid fa-eye text-white text-sm"></i></span><p><b class="text-sky-200">Праект:</b> <span class="text-slate-200">«Паэтонімы пісьменнікаў Светлагоршчыны» — вялікая тэма, якую адкрывае гэта даследаванне</span></p></div>
+            <div class="flex gap-3 items-start bg-white/[.06] border border-white/10 rounded-xl p-3.5"><span class="w-9 h-9 shrink-0 rounded-lg grid place-items-center" style="background:linear-gradient(135deg,#f59e0b,#fb7185)"><i class="fa-solid fa-crosshairs text-white text-sm"></i></span><p><b class="text-amber-200">Першы крок:</b> <span class="text-slate-200">аказіяналізмы зборніка «Кругаспеў» (2006) — словаўтварэнне, семантыка, стылістыка</span></p></div>
+            <div class="flex gap-3 items-start bg-white/[.06] border border-white/10 rounded-xl p-3.5"><span class="w-9 h-9 shrink-0 rounded-lg grid place-items-center" style="background:linear-gradient(135deg,#10b981,#0ea5e9)"><i class="fa-solid fa-fingerprint text-white text-sm"></i></span><p><b class="text-emerald-200">Мэта:</b> <span class="text-slate-200">раскрыць ролю аказіяналізмаў у ідыястылі паэтэсы</span></p></div>
+          </div>
+          <div class="mt-5 rounded-xl p-4 border border-amber-300/25 bg-gradient-to-br from-amber-300/10 to-rose-400/10">
+            <div class="flex items-center gap-2 text-amber-200 text-[13px] font-bold uppercase tracking-widest mb-2"><i class="fa-solid fa-wand-magic-sparkles"></i> Слова-капсула дня</div>
+            <div class="flex items-end justify-between gap-3">
+              <div><div id="wordOfDay" class="serif text-3xl font-black gold-text">туманадым</div><div id="wordOfDayMean" class="text-[13px] text-slate-300 mt-1 italic">дыханне туману — вільготны, цяжкі паветраны стан світання</div></div>
+              <button id="shuffleWord" class="shrink-0 w-11 h-11 rounded-xl grid place-items-center text-[#0f1a4d] font-bold hover:rotate-180 transition duration-500" style="background:linear-gradient(135deg,#fde68a,#fb7185)"><i class="fa-solid fa-shuffle"></i></button>
+            </div>
+          </div>
+          <div class="mt-4 flex items-center gap-3 text-[12px] text-slate-300/80"><i class="fa-solid fa-user-graduate text-amber-300"></i> Лыжак Цімур · IX «В» клас · СШ №11 г. Светлагорска</div>
+        </div>
+        <!-- фоновыя словы-капсулы: задні фон, не перакрываюць тэкст -->
+        <div aria-hidden="true" class="pointer-events-none select-none absolute z-0 -top-7 left-2 sm:left-6 rounded-full px-5 py-2 serif italic font-bold text-[15px] text-sky-200/50 border border-white/10 bg-white/[.04]" style="animation:floaty 7s ease-in-out infinite">кругаспеў</div>
+        <div aria-hidden="true" class="pointer-events-none select-none absolute z-0 -bottom-7 right-2 sm:right-6 rounded-full px-5 py-2 serif italic font-bold text-[15px] text-amber-200/50 border border-white/10 bg-white/[.04]" style="animation:floaty 8s ease-in-out infinite">блакітна-сонечна</div>
+      </div>
+    </div>
+
+    <div class="mt-14 flex justify-center">
+      <a href="#aktualnasc" class="flex flex-col items-center gap-2 text-slate-300/70 hover:text-amber-300 transition text-[12px] uppercase tracking-[0.28em]">гартай <span class="w-10 h-14 rounded-full border border-white/25 grid justify-center pt-2"><span class="w-1.5 h-3 rounded-full bg-amber-300 animate-bounce block"></span></span></a>
+    </div>
+  </div>
+  <div class="absolute bottom-0 left-0 right-0"><svg viewBox="0 0 1440 90" class="w-full block" preserveAspectRatio="none" style="height:70px"><path fill="#f7f3ff" d="M0,60 C240,95 480,10 720,45 C960,80 1200,20 1440,55 L1440,90 L0,90 Z"></path></svg></div>
+</section>
+
+<!-- MARQUEE -->
+<div class="bg-[#f7f3ff] text-[#0f1a4d] overflow-hidden py-3 border-b border-[#0f1a4d]/10">
+  <div class="flex whitespace-nowrap marquee-track gap-0 w-max font-semibold text-[13px] uppercase tracking-[0.2em]">
+    <span class="px-6">кругаспеў ✦ туманадым ✦ гукаўзлёт ✦ фарбадзейсныя ✦ эйфарыя-мітульга ✦ блакітна-сонечна ✦ адсмутнеў ✦ засутонена ✦ ветраспеў ✦ зоркацячэнне ✦ сонцабег ✦&nbsp;</span>
+    <span class="px-6">кругаспеў ✦ туманадым ✦ гукаўзлёт ✦ фарбадзейсныя ✦ эйфарыя-мітульга ✦ блакітна-сонечна ✦ адсмутнеў ✦ засутонена ✦ ветраспеў ✦ зоркацячэнне ✦ сонцабег ✦&nbsp;</span>
+  </div>
+</div>
+
+<!-- 2 AKTUALNASC -->
+<section id="aktualnasc" class="bg-[#f7f3ff] text-slate-800 py-16 sm:py-24 relative overflow-hidden">
+  <div class="absolute -top-20 -right-20 w-96 h-96 rounded-full opacity-20 blur-3xl" style="background:#7c3aed"></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="reveal flex items-center gap-3 text-[12px] font-bold uppercase tracking-[0.28em] text-violet-700 mb-4"><span class="w-8 h-[2px] bg-violet-600 rounded-full"></span>01 · Чаму гэта важна</div>
+    <div class="reveal grid lg:grid-cols-2 gap-6 items-end mb-10">
+      <h2 class="serif font-black text-3xl sm:text-5xl leading-[1.05] text-[#0f1a4d]">Актуальнасць <span class="italic font-normal text-violet-700">і</span> навуковая навізна</h2>
+      <p class="text-slate-600 text-[15px] sm:text-base leading-relaxed">Санет — самая строгая форма ў паэзіі: 14 радкоў, жалезны рытм, дакладная рыфма. Як у гэтай «клетцы» застацца свабоднай? Адказ Соф'і Шах — <b>ствараць новыя словы</b>.</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-5 sm:gap-6">
+      <article class="reveal hover-lift card-glow rounded-3xl p-7 sm:p-9 bg-white border border-violet-100 shadow-xl shadow-violet-900/10 relative overflow-hidden">
+        <div class="absolute top-0 left-0 right-0 h-1.5" style="background:linear-gradient(90deg,#0ea5e9,#7c3aed)"></div>
+        <div class="flex items-start justify-between mb-5">
+          <span class="w-14 h-14 rounded-2xl grid place-items-center text-2xl text-white shadow-lg" style="background:linear-gradient(135deg,#0ea5e9,#6366f1)"><i class="fa-solid fa-flask"></i></span>
+          <span class="serif italic text-6xl leading-none text-violet-100 select-none">01</span>
+        </div>
+        <h3 class="serif text-2xl font-bold text-[#0f1a4d] mb-3">Актуальнасць: лабараторыя мовы</h3>
+        <p class="text-slate-600 leading-relaxed text-[15px]">Паэтонімы — гэта <b class="text-[#0f1a4d]">«лабараторыя мовы»</b>, дзе выяўляецца творчы патэнцыял нацыі. Яны паказваюць, як жыве і дыхае беларуская мова сёння: якія карані яшчэ плённыя, якія мадэлі — жывыя.</p>
+        <ul class="mt-5 grid gap-2.5 text-[14px]">
+          <li class="flex gap-2.5 items-start bg-sky-50 border border-sky-100 rounded-xl p-3"><i class="fa-solid fa-check text-sky-600 mt-1"></i><span>Творчасць <b>Соф'і Шах</b> — яркая, самабытная з'ява, але <b>недастаткова вывучаная</b> ў лінгвістыцы.</span></li>
+          <li class="flex gap-2.5 items-start bg-violet-50 border border-violet-100 rounded-xl p-3"><i class="fa-solid fa-check text-violet-600 mt-1"></i><span>Аказіяналізмы дапамагаюць зразумець <b>механізмы абнаўлення лексікі</b> беларускай мовы.</span></li>
+        </ul>
+        <div class="mt-5 flex flex-wrap gap-2 text-[12px] font-semibold"><span class="px-3 py-1.5 rounded-full bg-[#0f1a4d] text-amber-300">жывая мова</span><span class="px-3 py-1.5 rounded-full bg-sky-100 text-sky-800">ідыястыль</span><span class="px-3 py-1.5 rounded-full bg-violet-100 text-violet-800">нацыянал. патэнцыял</span></div>
+      </article>
+      <article class="reveal reveal-delay-1 hover-lift card-glow rounded-3xl p-7 sm:p-9 text-white relative overflow-hidden shadow-2xl" style="background:linear-gradient(150deg,#0f1a4d 0%,#312e81 55%,#6d28d9 100%)">
+        <div class="absolute -right-16 -top-16 w-64 h-64 rounded-full opacity-30 blur-2xl" style="background:#fb7185"></div>
+        <div class="absolute -left-10 -bottom-16 w-56 h-56 rounded-full opacity-30 blur-2xl" style="background:#fbbf24"></div>
+        <div class="relative">
+          <div class="flex items-start justify-between mb-5">
+            <span class="w-14 h-14 rounded-2xl grid place-items-center text-2xl text-[#0f1a4d] shadow-lg" style="background:linear-gradient(135deg,#fde68a,#fb7185)"><i class="fa-solid fa-lightbulb"></i></span>
+            <span class="serif italic text-6xl leading-none text-white/15 select-none">02</span>
+          </div>
+          <h3 class="serif text-2xl font-bold mb-3">Навуковая навізна: упершыню</h3>
+          <p class="text-slate-200 leading-relaxed text-[15px]"><b class="text-amber-300">Спецыяльны аналіз</b> паэтонімаў-аказіяналізмаў у зборніку «Кругаспеў» праводзіцца <b>ўпершыню</b>. У рабоце ўпершыню сістэматызаваны ўсе 38 адзінак, вызначаны іх мадэлі і стылістычныя функцыі.</p>
+          <div class="mt-6 grid grid-cols-3 gap-3 text-center">
+            <div class="rounded-2xl bg-white/10 border border-white/15 p-4"><div class="serif font-black text-2xl sm:text-3xl text-amber-300">38</div><div class="text-[11px] uppercase tracking-widest text-slate-300 mt-1">адзінак<br>апісана</div></div>
+            <div class="rounded-2xl bg-white/10 border border-white/15 p-4"><div class="serif font-black text-2xl sm:text-3xl text-sky-300">5</div><div class="text-[11px] uppercase tracking-widest text-slate-300 mt-1">спосабаў<br>вылучана</div></div>
+            <div class="rounded-2xl bg-white/10 border border-white/15 p-4"><div class="serif font-black text-2xl sm:text-3xl text-rose-300">1</div><div class="text-[11px] uppercase tracking-widest text-slate-300 mt-1">слоўнік<br>створаны</div></div>
+          </div>
+          <p class="mt-5 text-[13px] text-slate-300 italic border-l-2 border-amber-300 pl-3">Практычная значнасць: матэрыялы можна выкарыстоўваць на ўроках беларускай мовы і літаратуры, факультатывах і ў краязнаўчай рабоце.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 3 METY -->
+<section id="mety" class="py-16 sm:py-24 relative overflow-hidden" style="background:linear-gradient(180deg,#f7f3ff 0%,#eef4ff 40%,#0a1030 40.2%,#0a1030 100%)">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="reveal rounded-[28px] p-7 sm:p-12 relative overflow-hidden shadow-2xl" style="background:linear-gradient(135deg,#fefce8 0%,#fff7ed 45%,#fdf2f8 100%);border:1px solid rgba(251,191,36,.35)">
+      <div class="absolute top-6 right-8 serif italic text-[90px] sm:text-[140px] leading-none text-amber-500/10 select-none font-black">Мэта</div>
+      <div class="relative grid lg:grid-cols-[1fr_1.1fr] gap-8">
+        <div>
+          <div class="inline-flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.26em] text-amber-700 mb-4"><span class="w-8 h-[2px] bg-amber-500 rounded-full"></span>02 · Мэты і задачы</div>
+          <h2 class="serif font-black text-3xl sm:text-4xl text-[#0f1a4d] leading-tight mb-5">Мэта даследавання</h2>
+          <div class="rounded-2xl p-5 sm:p-6 text-white relative overflow-hidden" style="background:linear-gradient(135deg,#0f1a4d,#4c1d95)">
+            <i class="fa-solid fa-bullseye absolute -right-4 -bottom-4 text-[110px] text-white/10"></i>
+            <p class="relative serif italic text-[16px] sm:text-[18px] leading-relaxed">Выявіць і ахарактарызаваць словаўтваральныя і семантыка-стылістычныя асаблівасці аказіяналізмаў у зборніку «Кругаспеў», вызначыць іх ролю ў фарміраванні <span class="text-amber-300 not-italic font-bold">ідыястылю паэтэсы</span>.</p>
+          </div>
+          <div class="mt-5 flex items-center gap-3 text-[13px] text-slate-600"><span class="w-10 h-10 rounded-xl grid place-items-center bg-[#0f1a4d] text-amber-300 shrink-0"><i class="fa-solid fa-quote-left"></i></span><span class="italic">Ідыястыль — непаўторны «почырк» аўтара: яго словы, вобразы і рытмы.</span></div>
+        </div>
+        <div>
+          <h3 class="font-bold text-[#0f1a4d] uppercase tracking-[0.18em] text-[13px] mb-4 flex items-center gap-2"><i class="fa-solid fa-list-check text-violet-600"></i> 4 задачы даследавання</h3>
+          <ol class="grid gap-3">
+            <li class="reveal group flex gap-4 items-start bg-white rounded-2xl border border-slate-200/80 p-4 sm:p-5 hover:border-amber-400 hover:shadow-xl hover:shadow-amber-500/10 transition">
+              <span class="shrink-0 w-10 h-10 rounded-xl grid place-items-center font-black serif text-lg text-white" style="background:linear-gradient(135deg,#0ea5e9,#6366f1)">1</span>
+              <div><b class="text-[#0f1a4d]">Вызначыць паняцце «аказіяналізм»</b><p class="text-slate-600 text-[14px] mt-1">у лексічнай сістэме беларускай мовы: чым аўтарскае слова адрозніваецца ад неалагізма і дыялектызма.</p></div>
+            </li>
+            <li class="reveal reveal-delay-1 group flex gap-4 items-start bg-white rounded-2xl border border-slate-200/80 p-4 sm:p-5 hover:border-amber-400 hover:shadow-xl hover:shadow-amber-500/10 transition">
+              <span class="shrink-0 w-10 h-10 rounded-xl grid place-items-center font-black serif text-lg text-white" style="background:linear-gradient(135deg,#8b5cf6,#ec4899)">2</span>
+              <div><b class="text-[#0f1a4d]">Зрабіць суцэльную выбарку адзінак</b><p class="text-slate-600 text-[14px] mt-1">з тэксту зборніка: прачытаны ўсе 21 вянок санетаў, выпісаны 38 аўтарскіх новатвораў.</p></div>
+            </li>
+            <li class="reveal reveal-delay-2 group flex gap-4 items-start bg-white rounded-2xl border border-slate-200/80 p-4 sm:p-5 hover:border-amber-400 hover:shadow-xl hover:shadow-amber-500/10 transition">
+              <span class="shrink-0 w-10 h-10 rounded-xl grid place-items-center font-black serif text-lg text-white" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">3</span>
+              <div><b class="text-[#0f1a4d]">Правесці два віды аналізу</b><p class="text-slate-600 text-[14px] mt-1">словаўтваральны (як створана) і семантыка-стылістычны (што значыць і навошта).</p></div>
+            </li>
+            <li class="reveal reveal-delay-3 group flex gap-4 items-start bg-white rounded-2xl border border-slate-200/80 p-4 sm:p-5 hover:border-amber-400 hover:shadow-xl hover:shadow-amber-500/10 transition">
+              <span class="shrink-0 w-10 h-10 rounded-xl grid place-items-center font-black serif text-lg text-white" style="background:linear-gradient(135deg,#10b981,#0ea5e9)">4</span>
+              <div><b class="text-[#0f1a4d]">Вызначыць ролю ў ідыястылі + слоўнік</b><p class="text-slate-600 text-[14px] mt-1">ацаніць уклад у стыль Шах і скласці аўтарскі слоўнік аказіяналізмаў (Дадатак 4).</p></div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 METADY -->
+<section id="metady" class="py-16 sm:py-20 relative overflow-hidden" style="background:#0a1030">
+  <div class="blob w-[420px] h-[420px] left-[-140px] top-10" style="background:#1e40af;opacity:.4"></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 relative">
+    <div class="reveal text-center max-w-2xl mx-auto mb-10">
+      <div class="inline-flex items-center gap-2 glass rounded-full px-4 py-2 text-[12px] font-bold uppercase tracking-[0.26em] text-amber-300 mb-4"><i class="fa-solid fa-microscope"></i> 03 · Метады даследавання</div>
+      <h2 class="serif font-black text-3xl sm:text-5xl">Як мы <span class="gold-text">вывучалі</span> словы</h2>
+      <p class="text-slate-300/90 mt-3 text-[15px]">Спалучэнне класічнай лінгвістыкі і дакладнага падліку — каб кожная выснова абапіралася на факты.</p>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
+      <div class="reveal hover-lift glass rounded-2xl p-5 text-center group cursor-default">
+        <div class="w-14 h-14 mx-auto rounded-2xl grid place-items-center text-2xl mb-3 group-hover:scale-110 transition" style="background:linear-gradient(135deg,#0ea5e9,#6366f1)"><i class="fa-solid fa-layer-group text-white"></i></div>
+        <h3 class="font-bold text-[14px] sm:text-[15px]">Суцэльная выбарка</h3><p class="text-[12.5px] text-slate-300/80 mt-1.5 leading-relaxed">Прачытана ўсё — без выключэнняў</p>
+      </div>
+      <div class="reveal reveal-delay-1 hover-lift glass rounded-2xl p-5 text-center group cursor-default">
+        <div class="w-14 h-14 mx-auto rounded-2xl grid place-items-center text-2xl mb-3 group-hover:scale-110 transition" style="background:linear-gradient(135deg,#8b5cf6,#ec4899)"><i class="fa-solid fa-align-left text-white"></i></div>
+        <h3 class="font-bold text-[14px] sm:text-[15px]">Апісальны метад</h3><p class="text-[12.5px] text-slate-300/80 mt-1.5 leading-relaxed">Сістэматызацыя і тлумачэнне</p>
+      </div>
+      <div class="reveal reveal-delay-2 hover-lift glass rounded-2xl p-5 text-center group cursor-default">
+        <div class="w-14 h-14 mx-auto rounded-2xl grid place-items-center text-2xl mb-3 group-hover:scale-110 transition" style="background:linear-gradient(135deg,#f59e0b,#ef4444)"><i class="fa-solid fa-puzzle-piece text-white"></i></div>
+        <h3 class="font-bold text-[14px] sm:text-[15px]">Словаўтваральны аналіз</h3><p class="text-[12.5px] text-slate-300/80 mt-1.5 leading-relaxed">Разбор па марфемах і мадэлях</p>
+      </div>
+      <div class="reveal hover-lift glass rounded-2xl p-5 text-center group cursor-default">
+        <div class="w-14 h-14 mx-auto rounded-2xl grid place-items-center text-2xl mb-3 group-hover:scale-110 transition" style="background:linear-gradient(135deg,#10b981,#0ea5e9)"><i class="fa-solid fa-palette text-white"></i></div>
+        <h3 class="font-bold text-[14px] sm:text-[15px]">Семантыка-стылістычны</h3><p class="text-[12.5px] text-slate-300/80 mt-1.5 leading-relaxed">Сэнс, вобраз, функцыя ў тэксце</p>
+      </div>
+      <div class="reveal reveal-delay-1 hover-lift glass rounded-2xl p-5 text-center group cursor-default col-span-2 md:col-span-1">
+        <div class="w-14 h-14 mx-auto rounded-2xl grid place-items-center text-2xl mb-3 group-hover:scale-110 transition" style="background:linear-gradient(135deg,#fde68a,#fb7185)"><i class="fa-solid fa-calculator text-[#0f1a4d]"></i></div>
+        <h3 class="font-bold text-[14px] sm:text-[15px]">Колькасны падлік</h3><p class="text-[12.5px] text-slate-300/80 mt-1.5 leading-relaxed">Працэнты і дыяграмы</p>
+      </div>
+    </div>
+    <div class="reveal mt-6 glass rounded-2xl px-5 py-4 flex flex-col sm:flex-row items-center gap-3 justify-between text-[14px]">
+      <span class="text-slate-200"><i class="fa-solid fa-database text-amber-300 mr-2"></i><b>Крыніца:</b> тэксты 21 вянка санетаў зборніка «Кругаспеў» (2006) · суцэльная выбарка · кантэкстны аналіз кожнага словаўжывання</span>
+      <span class="shrink-0 text-[12px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full bg-amber-300/15 text-amber-300 border border-amber-300/30">21 вянок · 294 санеты</span>
+    </div>
+  </div>
+</section>
+
+<!-- 5 VYNIKI -->
+<section id="vyniki" class="py-16 sm:py-24 relative overflow-hidden text-white" style="background:linear-gradient(180deg,#0a1030 0%,#1a1446 50%,#2b1a4d 100%)">
+  <div class="blob w-[500px] h-[300px] right-[-100px] top-20" style="background:#7c3aed;opacity:.35"></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 relative">
+    <div class="reveal flex items-center gap-3 text-[12px] font-bold uppercase tracking-[0.28em] text-amber-300 mb-4"><span class="w-8 h-[2px] bg-amber-300 rounded-full"></span>04 · Вынікі аналізу</div>
+    <div class="grid lg:grid-cols-2 gap-4 items-end mb-10">
+      <h2 class="reveal serif font-black text-3xl sm:text-5xl leading-tight">Ключавыя лічбы <span class="italic font-normal text-amber-200">даследавання</span></h2>
+      <p class="reveal text-slate-300 text-[15px]">Усяго знойдзена <b class="text-white">38 аказіянальных адзінак</b> у 21 вянку санетаў. Гэта значыць — амаль у кожным вянку паэтэса стварае мінімум адно новае слова.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+      <div class="reveal hover-lift rounded-3xl p-7 text-center relative overflow-hidden border border-white/12" style="background:linear-gradient(160deg,rgba(125,211,252,.14),rgba(125,211,252,.03))">
+        <div class="serif font-black text-6xl sm:text-7xl gold-text"><span class="counter" data-target="38">0</span></div>
+        <div class="mt-2 font-bold">аказіянальных адзінак</div><div class="text-[13px] text-slate-300 mt-1">знойдзена ў зборніку</div>
+        <i class="fa-solid fa-feather absolute top-5 right-5 text-white/15 text-2xl"></i>
+      </div>
+      <div class="reveal reveal-delay-1 hover-lift rounded-3xl p-7 text-center relative overflow-hidden border border-white/12" style="background:linear-gradient(160deg,rgba(125,211,252,.12),rgba(125,211,252,.03))">
+        <div class="serif font-black text-6xl sm:text-7xl text-sky-300"><span class="counter" data-target="21">0</span></div>
+        <div class="mt-2 font-bold">вянок санетаў</div><div class="text-[13px] text-slate-300 mt-1">прааналізавана цалкам</div>
+        <i class="fa-solid fa-book-open absolute top-5 right-5 text-white/15 text-2xl"></i>
+      </div>
+      <div class="reveal reveal-delay-2 hover-lift rounded-3xl p-7 text-center relative overflow-hidden border border-white/12" style="background:linear-gradient(160deg,rgba(251,191,36,.16),rgba(251,191,36,.03))">
+        <div class="serif font-black text-6xl sm:text-7xl text-amber-300"><span class="counter" data-target="47">0</span><span class="text-3xl">%</span></div>
+        <div class="mt-2 font-bold">складанне асноў</div><div class="text-[13px] text-slate-300 mt-1">18 слоў · самы прадуктыўны</div>
+        <i class="fa-solid fa-link absolute top-5 right-5 text-white/15 text-2xl"></i>
+      </div>
+      <div class="reveal hover-lift rounded-3xl p-7 text-center relative overflow-hidden border border-white/12" style="background:linear-gradient(160deg,rgba(251,113,133,.16),rgba(251,113,133,.03))">
+        <div class="serif font-black text-6xl sm:text-7xl text-rose-300"><span class="counter" data-target="18">0</span><span class="text-3xl">%</span></div>
+        <div class="mt-2 font-bold">суфіксальны спосаб</div><div class="text-[13px] text-slate-300 mt-1">7 слоў · эмацыйныя адценні</div>
+        <i class="fa-solid fa-shapes absolute top-5 right-5 text-white/15 text-2xl"></i>
+      </div>
+      <div class="reveal reveal-delay-1 hover-lift rounded-3xl p-7 text-center relative overflow-hidden border border-white/12" style="background:linear-gradient(160deg,rgba(251,113,133,.13),rgba(251,113,133,.03))">
+        <div class="serif font-black text-6xl sm:text-7xl text-orange-300"><span class="counter" data-target="18">0</span><span class="text-3xl">%</span></div>
+        <div class="mt-2 font-bold">прэфіксальны спосаб</div><div class="text-[13px] text-slate-300 mt-1">7 слоў · вектар і адмаўленне</div>
+        <i class="fa-solid fa-arrow-right-to-bracket absolute top-5 right-5 text-white/15 text-2xl"></i>
+      </div>
+      <div class="reveal reveal-delay-2 hover-lift rounded-3xl p-7 text-center relative overflow-hidden border border-white/12" style="background:linear-gradient(160deg,rgba(52,211,153,.16),rgba(52,211,153,.03))">
+        <div class="serif font-black text-6xl sm:text-7xl text-emerald-300"><span class="counter" data-target="8">0</span><span class="text-3xl">%</span></div>
+        <div class="mt-2 font-bold">прэфіксальна-суфіксальны</div><div class="text-[13px] text-slate-300 mt-1">3 словы · рэдкі, экспрэсіўны</div>
+        <i class="fa-solid fa-wand-magic-sparkles absolute top-5 right-5 text-white/15 text-2xl"></i>
+      </div>
+    </div>
+
+    <div class="reveal grid lg:grid-cols-[1.1fr_.9fr] gap-4">
+      <div class="glass rounded-3xl p-6 sm:p-8">
+        <h3 class="font-bold mb-1 flex items-center gap-2"><i class="fa-solid fa-chart-column text-amber-300"></i> Размеркаванне па спосабах словаўтварэння</h3>
+        <p class="text-[13px] text-slate-300/80 mb-6">Даўжыня слупка = доля спосабу ў агульнай колькасці (38 адзінак)</p>
+        <div class="grid gap-4 text-[13px] font-semibold">
+          <div><div class="flex justify-between mb-1.5"><span>Складанне асноў (кампазіцыя)</span><span class="text-amber-300">18 · 47%</span></div><div class="h-3.5 rounded-full bg-white/10 overflow-hidden"><div class="bar-fill h-full rounded-full" data-w="47%" style="--w:47%;background:linear-gradient(90deg,#fbbf24,#fb7185)"></div></div></div>
+          <div><div class="flex justify-between mb-1.5"><span>Суфіксальны</span><span class="text-sky-300">7 · 18%</span></div><div class="h-3.5 rounded-full bg-white/10 overflow-hidden"><div class="bar-fill h-full rounded-full" data-w="18%" style="--w:18%;background:linear-gradient(90deg,#0ea5e9,#6366f1)"></div></div></div>
+          <div><div class="flex justify-between mb-1.5"><span>Прэфіксальны</span><span class="text-rose-300">7 · 18%</span></div><div class="h-3.5 rounded-full bg-white/10 overflow-hidden"><div class="bar-fill h-full rounded-full" data-w="18%" style="--w:18%;background:linear-gradient(90deg,#ec4899,#8b5cf6)"></div></div></div>
+          <div><div class="flex justify-between mb-1.5"><span>Прэфіксальна-суфіксальны</span><span class="text-emerald-300">3 · 8%</span></div><div class="h-3.5 rounded-full bg-white/10 overflow-hidden"><div class="bar-fill h-full rounded-full" data-w="8%" style="--w:8%;background:linear-gradient(90deg,#10b981,#0ea5e9)"></div></div></div>
+          <div><div class="flex justify-between mb-1.5"><span>Бяссуфіксны і нявытворны</span><span class="text-violet-300">3 · 8%</span></div><div class="h-3.5 rounded-full bg-white/10 overflow-hidden"><div class="bar-fill h-full rounded-full" data-w="8%" style="--w:8%;background:linear-gradient(90deg,#a78bfa,#6366f1)"></div></div></div>
+        </div>
+      </div>
+      <div class="rounded-3xl p-6 sm:p-8 relative overflow-hidden" style="background:linear-gradient(135deg,#fef3c7,#fed7aa 50%,#fecdd3)">
+        <h3 class="serif font-black text-xl sm:text-2xl text-[#0f1a4d] mb-3">Выснова ў адным сказе</h3>
+        <p class="text-[#0f1a4d]/90 text-[15px] leading-relaxed">Соф'я Шах аддае перавагу <b>складанню</b>: яно дазваляе «спакаваць» два вобразы ў адно слова-капсулу і тым самым <b>зэканоміць месца ў жорсткім санетным памеры</b> — без страты сэнсу.</p>
+        <div class="mt-5 grid grid-cols-3 gap-2 text-center text-[#0f1a4d]">
+          <div class="bg-white/70 rounded-xl py-3 px-1 border border-[#0f1a4d]/10"><div class="font-black serif text-lg">2 у 1</div><div class="text-[11px] font-semibold uppercase tracking-wider opacity-70">вобразы ў слове</div></div>
+          <div class="bg-white/70 rounded-xl py-3 px-1 border border-[#0f1a4d]/10"><div class="font-black serif text-lg">14</div><div class="text-[11px] font-semibold uppercase tracking-wider opacity-70">радкоў санета</div></div>
+          <div class="bg-white/70 rounded-xl py-3 px-1 border border-[#0f1a4d]/10"><div class="font-black serif text-lg">∞</div><div class="text-[11px] font-semibold uppercase tracking-wider opacity-70">адценняў сэнсу</div></div>
+        </div>
+        <div class="mt-5 inline-flex items-center gap-2 text-[13px] font-bold text-[#0f1a4d]"><span class="w-8 h-8 rounded-full grid place-items-center text-white" style="background:#0f1a4d"><i class="fa-solid fa-arrow-right"></i></span> Глядзі прыклады ва ўкладках ніжэй</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 SPOSABY TABS -->
+<section id="sposaby" class="py-16 sm:py-24 bg-[#f7f3ff] text-slate-800 relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="reveal text-center max-w-3xl mx-auto mb-8">
+      <div class="inline-flex items-center gap-2 rounded-full px-4 py-2 text-[12px] font-bold uppercase tracking-[0.26em] text-violet-700 bg-violet-100 border border-violet-200 mb-4"><i class="fa-solid fa-layer-group"></i> 05 · Спосабы словаўтварэння</div>
+      <h2 class="serif font-black text-3xl sm:text-5xl text-[#0f1a4d]">Пяць майстэрняў <span class="italic font-normal text-violet-700">аднаго слова</span></h2>
+      <p class="text-slate-600 mt-3">Націскай на ўкладкі — разбяром будову, сэнс і прыклады кожнага спосабу.</p>
+    </div>
+
+    <div class="reveal flex gap-2 sm:gap-3 justify-start lg:justify-center overflow-x-auto pb-3 mb-6 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+      <button class="tab-btn active shrink-0 px-4 sm:px-5 py-3 rounded-2xl border-2 border-violet-200 bg-white font-bold text-[13px] sm:text-[14px] text-[#0f1a4d]" data-tab="t1"><i class="fa-solid fa-link mr-1.5 text-amber-500"></i>Складанне <span class="ml-1 text-[11px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-800">18</span></button>
+      <button class="tab-btn shrink-0 px-4 sm:px-5 py-3 rounded-2xl border-2 border-violet-200 bg-white font-bold text-[13px] sm:text-[14px] text-[#0f1a4d]" data-tab="t2"><i class="fa-solid fa-plus mr-1.5 text-sky-500"></i>Суфіксальны <span class="ml-1 text-[11px] px-2 py-0.5 rounded-full bg-sky-100 text-sky-800">7</span></button>
+      <button class="tab-btn shrink-0 px-4 sm:px-5 py-3 rounded-2xl border-2 border-violet-200 bg-white font-bold text-[13px] sm:text-[14px] text-[#0f1a4d]" data-tab="t3"><i class="fa-solid fa-arrow-right-to-bracket mr-1.5 text-rose-500"></i>Прэфіксальны <span class="ml-1 text-[11px] px-2 py-0.5 rounded-full bg-rose-100 text-rose-800">7</span></button>
+      <button class="tab-btn shrink-0 px-4 sm:px-5 py-3 rounded-2xl border-2 border-violet-200 bg-white font-bold text-[13px] sm:text-[14px] text-[#0f1a4d]" data-tab="t4"><i class="fa-solid fa-arrows-left-right mr-1.5 text-emerald-500"></i>Прэфікс.+суфікс. <span class="ml-1 text-[11px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800">3</span></button>
+      <button class="tab-btn shrink-0 px-4 sm:px-5 py-3 rounded-2xl border-2 border-violet-200 bg-white font-bold text-[13px] sm:text-[14px] text-[#0f1a4d]" data-tab="t5"><i class="fa-solid fa-scissors mr-1.5 text-violet-500"></i>Бяссуфіксны <span class="ml-1 text-[11px] px-2 py-0.5 rounded-full bg-violet-100 text-violet-800">3</span></button>
+    </div>
+
+    <div class="reveal rounded-[26px] bg-white border border-violet-100 shadow-2xl shadow-violet-900/10 overflow-hidden">
+      <!-- T1 -->
+      <div id="t1" class="tab-panel active">
+        <div class="grid lg:grid-cols-[1fr_1fr]">
+          <div class="p-6 sm:p-10">
+            <span class="text-[11px] font-bold uppercase tracking-[0.22em] px-3 py-1.5 rounded-full text-white" style="background:linear-gradient(90deg,#f59e0b,#ef4444)">Самы прадуктыўны · ~47%</span>
+            <h3 class="serif font-black text-2xl sm:text-4xl text-[#0f1a4d] mt-4">Складанне асноў: словы-капсулы</h3>
+            <p class="text-slate-600 mt-3 text-[15px] leading-relaxed">Дзве асновы зліваюцца ў адно слова — і <b>сінтэзуюць складанае паняцце</b>, якое немагчыма перадаць адным звычайным словам. Эканомія формы + выбух сэнсу — ідэальна для санета.</p>
+            <div class="mt-5 rounded-2xl bg-[#0f1a4d] text-white p-5 font-mono text-[14px] leading-loose">круг + спеў → <b class="text-amber-300">кругаспеў</b><br>туман + дыханне → <b class="text-amber-300">туманадым</b><br>гук + узлёт → <b class="text-amber-300">гукаўзлёт</b></div>
+            <p class="mt-4 text-[14px] text-slate-600 italic border-l-[3px] border-amber-400 pl-3">«Фарбадзейсныя» = фарба + дзея + -сн- : колер, які дзейнічае, жыве. «Эйфарыя-мітульга» — радасць, што мітусіцца, як матылёк.</p>
+          </div>
+          <div class="p-6 sm:p-10 pt-0 lg:pt-10" style="background:linear-gradient(160deg,#fffbeb,#fef3c7)">
+            <h4 class="text-[12px] font-bold uppercase tracking-[0.22em] text-amber-700 mb-4">Прыклады з тэкстаў · націсні, каб пачуць сэнс</h4>
+            <div class="grid gap-2.5" id="ex-t1"></div>
+          </div>
+        </div>
+      </div>
+      <!-- T2 -->
+      <div id="t2" class="tab-panel">
+        <div class="grid lg:grid-cols-[1fr_1fr]">
+          <div class="p-6 sm:p-10">
+            <span class="text-[11px] font-bold uppercase tracking-[0.22em] px-3 py-1.5 rounded-full text-white" style="background:linear-gradient(90deg,#0ea5e9,#6366f1)">Суфіксальны · ~18% · 7 слоў</span>
+            <h3 class="serif font-black text-2xl sm:text-4xl text-[#0f1a4d] mt-4">Суфікс мяняе душу слова</h3>
+            <p class="text-slate-600 mt-3 text-[15px] leading-relaxed">Дададзены суфікс надае слову <b>эмацыйную афарбоўку</b>: пяшчоту, трывогу, узнёсласць. Корань знаёмы — а адценне новае, аўтарскае.</p>
+            <div class="mt-5 rounded-2xl bg-sky-50 border border-sky-200 p-5 text-[14px] leading-relaxed text-slate-700">бунт + <b class="text-sky-700">-оўн-</b> + -а → <b>бунтоўна</b> (прысл.) — з духам пратэсту<br>шчыры + <b class="text-sky-700">-аўн-іц-</b> → <b>шчыраўніцы</b> — тыя, хто шчыры да глыбіні<br>спагада + <b class="text-sky-700">-н-</b> → <b>спагадны</b> · быццё + <b class="text-sky-700">-ёва-</b> → <b>быццёвая</b></div>
+          </div>
+          <div class="p-6 sm:p-10 pt-0 lg:pt-10" style="background:linear-gradient(160deg,#f0f9ff,#e0f2fe)">
+            <h4 class="text-[12px] font-bold uppercase tracking-[0.22em] text-sky-700 mb-4">Прыклады</h4>
+            <div class="grid gap-2.5" id="ex-t2"></div>
+          </div>
+        </div>
+      </div>
+      <!-- T3 -->
+      <div id="t3" class="tab-panel">
+        <div class="grid lg:grid-cols-[1fr_1fr]">
+          <div class="p-6 sm:p-10">
+            <span class="text-[11px] font-bold uppercase tracking-[0.22em] px-3 py-1.5 rounded-full text-white" style="background:linear-gradient(90deg,#ec4899,#8b5cf6)">Прэфіксальны · ~18% · 7 слоў</span>
+            <h3 class="serif font-black text-2xl sm:text-4xl text-[#0f1a4d] mt-4">Прыстаўка задае кірунак</h3>
+            <p class="text-slate-600 mt-3 text-[15px] leading-relaxed">Прыстаўка паказвае <b>вектар руху або адмаўленне</b>: сысці ў смутак, вырвацца з цемры, адсутнасць мяжы. Дзеянне становіцца вобразам стану.</p>
+            <div class="mt-5 rounded-2xl bg-rose-50 border border-rose-200 p-5 text-[14px] leading-relaxed text-slate-700"><b class="text-rose-700">пад-</b>ціскі · <b class="text-rose-700">ад-</b>смутнеў (сышоў у смутак) · <b class="text-rose-700">вы-</b>мутныя (вырваныя з каламуці) · <b class="text-rose-700">не-</b>марач (тое, што не ахоплена марай-зданьню)</div>
+          </div>
+          <div class="p-6 sm:p-10 pt-0 lg:pt-10" style="background:linear-gradient(160deg,#fff1f2,#ffe4e6)">
+            <h4 class="text-[12px] font-bold uppercase tracking-[0.22em] text-rose-700 mb-4">Прыклады</h4>
+            <div class="grid gap-2.5" id="ex-t3"></div>
+          </div>
+        </div>
+      </div>
+      <!-- T4 -->
+      <div id="t4" class="tab-panel">
+        <div class="grid lg:grid-cols-[1fr_1fr]">
+          <div class="p-6 sm:p-10">
+            <span class="text-[11px] font-bold uppercase tracking-[0.22em] px-3 py-1.5 rounded-full text-white" style="background:linear-gradient(90deg,#10b981,#0ea5e9)">Прэфіксальна-суфіксальны · ~8% · 3 словы</span>
+            <h3 class="serif font-black text-2xl sm:text-4xl text-[#0f1a4d] mt-4">Падвойная магія: з двух бакоў</h3>
+            <p class="text-slate-600 mt-3 text-[15px] leading-relaxed">Слова будуецца адразу з прыстаўкай і суфіксам — <b>самая экспрэсіўная мадэль</b>. Так ствараюцца дзеясловы і дзеепрыметнікі стану прыроды і душы.</p>
+            <div class="mt-5 rounded-2xl bg-emerald-50 border border-emerald-200 p-5 text-[14px] leading-relaxed text-slate-700"><b class="text-emerald-700">пад-</b>пужваць + <b class="text-emerald-700">-ва-</b> → <b>падпужваюць</b> (палохаюць знізу, падсвядома)<br><b class="text-emerald-700">перад-</b>зімн + <b class="text-emerald-700">-ы</b> → <b>перадзімны</b> · <b class="text-emerald-700">за-</b>сутонены → <b>засутонена</b> (ахоплена змярканнем)</div>
+          </div>
+          <div class="p-6 sm:p-10 pt-0 lg:pt-10" style="background:linear-gradient(160deg,#ecfdf5,#d1fae5)">
+            <h4 class="text-[12px] font-bold uppercase tracking-[0.22em] text-emerald-700 mb-4">Прыклады</h4>
+            <div class="grid gap-2.5" id="ex-t4"></div>
+          </div>
+        </div>
+      </div>
+      <!-- T5 -->
+      <div id="t5" class="tab-panel">
+        <div class="grid lg:grid-cols-[1fr_1fr]">
+          <div class="p-6 sm:p-10">
+            <span class="text-[11px] font-bold uppercase tracking-[0.22em] px-3 py-1.5 rounded-full text-white" style="background:linear-gradient(90deg,#8b5cf6,#6366f1)">Бяссуфіксны і нявытворны · ~8%</span>
+            <h3 class="serif font-black text-2xl sm:text-4xl text-[#0f1a4d] mt-4">Мінімалізм: гук як сэнс</h3>
+            <p class="text-slate-600 mt-3 text-[15px] leading-relaxed">Самыя загадкавыя адзінкі: <b>скарачэнне або чысты гукапіс</b>. Карацей за слова — толькі ўздых. Тут сэнс нясе сам гук, рытм, паўза.</p>
+            <div class="mt-5 rounded-2xl bg-violet-50 border border-violet-200 p-5 text-[14px] leading-relaxed text-slate-700"><b class="text-violet-700">тне</b> — абрыў, ціск, сціснутае «цягне» без галоснай шырыні<br><b class="text-violet-700">спрат</b> — спрадвечная спрацованасць: спрэчка + брат + рат? кантэкст вырашае</div>
+          </div>
+          <div class="p-6 sm:p-10 pt-0 lg:pt-10" style="background:linear-gradient(160deg,#f5f3ff,#ede9fe)">
+            <h4 class="text-[12px] font-bold uppercase tracking-[0.22em] text-violet-700 mb-4">Прыклады</h4>
+            <div class="grid gap-2.5" id="ex-t5"></div>
+            <div class="mt-4 rounded-2xl bg-[#0f1a4d] text-white p-4 text-[13px] flex gap-3"><i class="fa-solid fa-circle-info text-amber-300 mt-0.5"></i><span>Такія словы — «тэст» для чытача: іх значэнне раскрываецца толькі ў кантэксце санета.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 SEMANTYKA -->
+<section id="semantyka" class="py-16 sm:py-24 relative overflow-hidden text-white" style="background:radial-gradient(800px 400px at 20% 0%,#312e81 0%,transparent 60%),radial-gradient(700px 400px at 90% 100%,#7c2d12 0%,transparent 55%),linear-gradient(180deg,#140f35,#0a1030)">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="reveal flex items-center gap-3 text-[12px] font-bold uppercase tracking-[0.28em] text-amber-300 mb-4"><span class="w-8 h-[2px] bg-amber-300 rounded-full"></span>06 · Семантыка і стылістыка</div>
+    <div class="grid lg:grid-cols-2 gap-6 items-end mb-10">
+      <h2 class="reveal serif font-black text-3xl sm:text-5xl leading-tight">Не прадметы — <span class="gold-text">станы душы</span></h2>
+      <p class="reveal text-slate-300 text-[15px] leading-relaxed">Аказіяналізмы Шах апісваюць не рэчы, а <b class="text-white">працэсы і адчуванні</b>. Напрыклад, <b class="text-amber-300">«адсмутнеў»</b> — гэта не «сумны», а «сышоў у смутак, растварыўся ў ім». Дзеяслоў стану замест прыметніка якасці.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-4 mb-6">
+      <div class="reveal hover-lift rounded-3xl overflow-hidden border border-white/12">
+        <div class="h-36 relative grid place-items-center" style="background:linear-gradient(135deg,#0ea5e9,#6366f1,#a78bfa)"><i class="fa-solid fa-eye text-5xl text-white/90"></i><span class="absolute bottom-3 left-4 text-[11px] font-bold uppercase tracking-[0.22em] bg-black/30 backdrop-blur px-3 py-1 rounded-full">Колер</span></div>
+        <div class="p-6 glass border-0 border-t border-white/10">
+          <h3 class="serif font-bold text-xl mb-2">Бачыць слова</h3>
+          <p class="text-[14px] text-slate-300 leading-relaxed"><b class="text-amber-300">«Блакітна-сонечна»</b> — неба і сонца ў адным слове. <b class="text-amber-300">«Фарбадзейсныя»</b> — колеры, якія дзейнічаюць, а не проста існуюць.</p>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-1 hover-lift rounded-3xl overflow-hidden border border-white/12">
+        <div class="h-36 relative grid place-items-center" style="background:linear-gradient(135deg,#f59e0b,#fb7185,#8b5cf6)"><i class="fa-solid fa-music text-5xl text-white/90"></i><span class="absolute bottom-3 left-4 text-[11px] font-bold uppercase tracking-[0.22em] bg-black/30 backdrop-blur px-3 py-1 rounded-full">Гук</span></div>
+        <div class="p-6 glass border-0 border-t border-white/10">
+          <h3 class="serif font-bold text-xl mb-2">Чуць слова</h3>
+          <p class="text-[14px] text-slate-300 leading-relaxed"><b class="text-amber-300">«Гукаўзлёт»</b> — рэзкі ўзлёт гуку ўвысь. <b class="text-amber-300">«Кругаспеў»</b> — бясконцы, замкнёны рух мелодыі па коле.</p>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-2 hover-lift rounded-3xl overflow-hidden border border-white/12">
+        <div class="h-36 relative grid place-items-center" style="background:linear-gradient(135deg,#10b981,#0ea5e9,#6366f1)"><i class="fa-solid fa-heart text-5xl text-white/90"></i><span class="absolute bottom-3 left-4 text-[11px] font-bold uppercase tracking-[0.22em] bg-black/30 backdrop-blur px-3 py-1 rounded-full">Эмоцыя</span></div>
+        <div class="p-6 glass border-0 border-t border-white/10">
+          <h3 class="serif font-bold text-xl mb-2">Адчуваць слова</h3>
+          <p class="text-[14px] text-slate-300 leading-relaxed"><b class="text-amber-300">«Ачамрэлым»</b> — у стане аслупянеласці. <b class="text-amber-300">«Засутонена»</b> — душа, ахутаная змярканнем.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal rounded-[26px] p-7 sm:p-10 relative overflow-hidden" style="background:linear-gradient(120deg,#fef3c7 0%,#fde68a 35%,#fbcfe8 100%)">
+      <div class="grid lg:grid-cols-[auto_1fr] gap-6 items-center">
+        <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-3xl grid place-items-center text-4xl text-white shrink-0 shadow-xl rotate-[-6deg]" style="background:linear-gradient(135deg,#7c3aed,#fb7185)"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+        <div>
+          <div class="text-[12px] font-black uppercase tracking-[0.26em] text-[#7c3aed] mb-2">Галоўнае адкрыццё · Сінэстэзія</div>
+          <h3 class="serif font-black text-2xl sm:text-3xl text-[#0f1a4d] leading-snug">Паэтэса змешвае пачуцці: колер гучыць, гук свеціцца, эмоцыя мае пах туману</h3>
+          <p class="text-[#0f1a4d]/80 mt-3 text-[15px] leading-relaxed">Менавіта сінэстэзія — змешванне адчуванняў — стварае свет, дзе <b>«блакітна-сонечна»</b> і <b>«фарбадзейсныя»</b>. Аказіяналізм тут — адзіны спосаб назваць тое, для чаго ў слоўніку яшчэ няма слова.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 SLOUNIK -->
+<section id="slounik" class="py-16 sm:py-24 bg-[#f7f3ff] text-slate-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="reveal flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-8">
+      <div>
+        <div class="inline-flex items-center gap-2 rounded-full px-4 py-2 text-[12px] font-bold uppercase tracking-[0.26em] text-emerald-700 bg-emerald-100 border border-emerald-200 mb-4"><i class="fa-solid fa-book-open"></i> 07 · Дадатак 4 · Інтэрактыў</div>
+        <h2 class="serif font-black text-3xl sm:text-5xl text-[#0f1a4d]">Слоўнік <span class="italic font-normal text-emerald-700">аказіяналізмаў</span></h2>
+        <p class="text-slate-600 mt-2 max-w-xl text-[15px]">Увядзі слова або значэнне ў пошук — слоўнік адфільтруецца імгненна. Усяго <b id="dictTotal">21</b> артыкул з даследавання.</p>
+      </div>
+      <div class="flex items-center gap-2 text-[13px] font-semibold text-slate-600"><span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span> Жывы пошук · без перазагрузкі</div>
+    </div>
+
+    <div class="reveal rounded-[26px] bg-white border border-slate-200 shadow-2xl shadow-slate-900/10 overflow-hidden">
+      <div class="p-4 sm:p-6 border-b border-slate-100 flex flex-col md:flex-row gap-3" style="background:linear-gradient(180deg,#0f1a4d,#1e1b4b)">
+        <div class="relative flex-1">
+          <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-amber-300"></i>
+          <input id="dictSearch" type="text" placeholder="Пошук: напрыклад, спеў, туман, блакіт…" class="w-full rounded-xl bg-white/10 border border-white/20 pl-11 pr-4 py-3.5 text-white placeholder:text-slate-400 outline-none focus:border-amber-300 focus:bg-white/15 transition text-[15px]">
+        </div>
+        <div class="flex gap-2 overflow-x-auto">
+          <button class="dict-filter shrink-0 px-4 py-2.5 rounded-xl text-[13px] font-bold bg-amber-300 text-[#0f1a4d]" data-f="all">Усе</button>
+          <button class="dict-filter shrink-0 px-4 py-2.5 rounded-xl text-[13px] font-bold bg-white/10 text-white border border-white/20 hover:bg-white/20" data-f="наз.">Назоўнікі</button>
+          <button class="dict-filter shrink-0 px-4 py-2.5 rounded-xl text-[13px] font-bold bg-white/10 text-white border border-white/20 hover:bg-white/20" data-f="прым.">Прыметнікі</button>
+          <button class="dict-filter shrink-0 px-4 py-2.5 rounded-xl text-[13px] font-bold bg-white/10 text-white border border-white/20 hover:bg-white/20" data-f="дзеясл.">Дзеясловы</button>
+          <button class="dict-filter shrink-0 px-4 py-2.5 rounded-xl text-[13px] font-bold bg-white/10 text-white border border-white/20 hover:bg-white/20" data-f="прысл.">Прыслоўі</button>
+        </div>
+      </div>
+      <div class="hidden md:grid grid-cols-[220px_150px_1fr_130px] gap-4 px-6 py-3 text-[11px] font-black uppercase tracking-[0.2em] text-slate-400 bg-slate-50 border-b border-slate-100">
+        <span>Слова</span><span>Часціна мовы</span><span>Значэнне (паводле кантэксту)</span><span class="text-right">Спосаб</span>
+      </div>
+      <div id="dictList" class="divide-y divide-slate-100 max-h-[560px] overflow-y-auto"></div>
+      <div class="px-5 py-4 bg-slate-50 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-2 text-[13px] text-slate-500">
+        <span id="dictCount">Паказана: 21 з 21</span>
+        <span class="italic serif">Слоўнік складзены паводле Дадатка 4 даследчай работы · тлумачэнні — аўтарскія, кантэкстныя</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9 MAISTERNIA -->
+<section id="maisternia" class="py-16 sm:py-24 relative overflow-hidden text-white" style="background:linear-gradient(180deg,#0a1030,#1e1b4b 60%,#3b1d4d)">
+  <div class="blob w-[480px] h-[480px] left-1/3 top-0" style="background:#7c3aed;opacity:.3"></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 relative">
+    <div class="reveal text-center max-w-3xl mx-auto mb-10">
+      <div class="inline-flex items-center gap-2 glass rounded-full px-4 py-2 text-[12px] font-bold uppercase tracking-[0.26em] text-amber-300 mb-4"><i class="fa-solid fa-hammer"></i> 08 · Творчая майстэрня</div>
+      <h2 class="serif font-black text-3xl sm:text-5xl">Ствары свой <span class="gold-text">аказіяналізм</span></h2>
+      <p class="text-slate-300 mt-3">Памятка з даследавання: 4 крокі — і канструктар новых слоў проста тут, на старонцы.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+      <div class="reveal hover-lift glass rounded-3xl p-6 relative overflow-hidden"><span class="serif font-black text-5xl num-outline absolute top-3 right-4">1</span><div class="w-12 h-12 rounded-2xl grid place-items-center text-xl mb-4" style="background:linear-gradient(135deg,#0ea5e9,#6366f1)"><i class="fa-solid fa-cubes text-white"></i></div><h3 class="font-bold mb-1.5">Выберы асновы</h3><p class="text-[13.5px] text-slate-300 leading-relaxed">Злучы два вобразы: <i>вецер + спеў</i>, <i>зорка + цячэнне</i>. Шукай нечаканае, але дакладнае суседства.</p></div>
+      <div class="reveal reveal-delay-1 hover-lift glass rounded-3xl p-6 relative overflow-hidden"><span class="serif font-black text-5xl num-outline absolute top-3 right-4">2</span><div class="w-12 h-12 rounded-2xl grid place-items-center text-xl mb-4" style="background:linear-gradient(135deg,#8b5cf6,#ec4899)"><i class="fa-solid fa-screwdriver-wrench text-white"></i></div><h3 class="font-bold mb-1.5">Выкарыстай мадэлі</h3><p class="text-[13.5px] text-slate-300 leading-relaxed">Складзі асновы, дадай суфікс ці прыстаўку — як гэта робіць Соф'я Шах. Правер гучанне ўслых.</p></div>
+      <div class="reveal reveal-delay-2 hover-lift glass rounded-3xl p-6 relative overflow-hidden"><span class="serif font-black text-5xl num-outline absolute top-3 right-4">3</span><div class="w-12 h-12 rounded-2xl grid place-items-center text-xl mb-4" style="background:linear-gradient(135deg,#f59e0b,#ef4444)"><i class="fa-solid fa-wand-magic-sparkles text-white"></i></div><h3 class="font-bold mb-1.5">Ствары вобразнасць</h3><p class="text-[13.5px] text-slate-300 leading-relaxed">Хай слова нясе сінэстэзію: колер, гук і эмоцыю адначасова — як «блакітна-сонечна».</p></div>
+      <div class="reveal reveal-delay-3 hover-lift glass rounded-3xl p-6 relative overflow-hidden"><span class="serif font-black text-5xl num-outline absolute top-3 right-4">4</span><div class="w-12 h-12 rounded-2xl grid place-items-center text-xl mb-4" style="background:linear-gradient(135deg,#10b981,#0ea5e9)"><i class="fa-solid fa-circle-check text-white"></i></div><h3 class="font-bold mb-1.5">Правер сэнс</h3><p class="text-[13.5px] text-slate-300 leading-relaxed">Пасадзі слова ў сказ і прачытай уголас. Зразумела без слоўніка, але здзіўляе? Значыць, атрымалася!</p></div>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-4">
+      <!-- constructor -->
+      <div class="reveal rounded-[26px] p-6 sm:p-8 text-[#0f1a4d] relative overflow-hidden" style="background:linear-gradient(135deg,#fffbeb,#fde68a 45%,#fecdd3)">
+        <h3 class="serif font-black text-2xl mb-1 flex items-center gap-2"><i class="fa-solid fa-flask-vial text-violet-700"></i> Канструктар слоў</h3>
+        <p class="text-[14px] text-[#0f1a4d]/70 mb-5">Абяры дзве асновы і злучнік — атрымаеш свой паэтонім у стылі Шах.</p>
+        <label class="text-[12px] font-black uppercase tracking-widest">Аснова 1 · вобраз</label>
+        <div id="roots1" class="flex flex-wrap gap-2 mt-2 mb-4"></div>
+        <label class="text-[12px] font-black uppercase tracking-widest">Аснова 2 · з'ява</label>
+        <div id="roots2" class="flex flex-wrap gap-2 mt-2 mb-4"></div>
+        <label class="text-[12px] font-black uppercase tracking-widest">Злучэнне</label>
+        <div class="flex flex-wrap gap-2 mt-2 mb-5" id="joins">
+          <button data-j="" class="join-btn px-4 py-2 rounded-xl bg-[#0f1a4d] text-white text-[13px] font-bold">без галоснай</button>
+          <button data-j="а" class="join-btn px-4 py-2 rounded-xl bg-white border border-[#0f1a4d]/20 text-[13px] font-bold">-а-</button>
+          <button data-j="о" class="join-btn px-4 py-2 rounded-xl bg-white border border-[#0f1a4d]/20 text-[13px] font-bold">-о-</button>
+          <button data-j="-" class="join-btn px-4 py-2 rounded-xl bg-white border border-[#0f1a4d]/20 text-[13px] font-bold">праз злучок -</button>
+        </div>
+        <div class="rounded-2xl bg-[#0f1a4d] text-white p-5 flex items-center justify-between gap-3">
+          <div><div class="text-[11px] uppercase tracking-[0.22em] text-amber-300 font-bold">Тваё слова</div><div id="myWord" class="serif font-black text-3xl sm:text-4xl gold-text">ветраспеў</div><div id="myWordMean" class="text-[13px] text-slate-300 italic mt-1">спеў ветру — гук, які нясе вецер скрозь цішыню</div></div>
+          <button id="randomBtn" class="shrink-0 px-4 py-3 rounded-xl font-bold text-[#0f1a4d] text-[13px] hover:scale-105 transition" style="background:linear-gradient(135deg,#fde68a,#fb7185)"><i class="fa-solid fa-dice mr-1"></i> Выпадкова</button>
+        </div>
+      </div>
+      <!-- examples -->
+      <div class="reveal reveal-delay-1 rounded-[26px] glass p-6 sm:p-8">
+        <h3 class="serif font-black text-2xl mb-1"><i class="fa-solid fa-star text-amber-300 mr-2"></i>Удалыя ўзоры</h3>
+        <p class="text-[14px] text-slate-300 mb-5">Прыклады «правільных» аказіяналізмаў: празрыстая будова + свежы вобраз.</p>
+        <div class="grid gap-3">
+          <div class="rounded-2xl bg-white/[.07] border border-white/12 p-4 flex items-center gap-4 hover:bg-white/[.12] transition"><span class="w-12 h-12 shrink-0 rounded-xl grid place-items-center text-xl" style="background:linear-gradient(135deg,#0ea5e9,#6366f1)"><i class="fa-solid fa-wind text-white"></i></span><div><div class="serif font-bold text-lg text-amber-200">ветраспеў</div><div class="text-[13px] text-slate-300">вецер + спеў — мелодыя, якую спявае вецер у правадах</div></div></div>
+          <div class="rounded-2xl bg-white/[.07] border border-white/12 p-4 flex items-center gap-4 hover:bg-white/[.12] transition"><span class="w-12 h-12 shrink-0 rounded-xl grid place-items-center text-xl" style="background:linear-gradient(135deg,#f59e0b,#ef4444)"><i class="fa-solid fa-star text-white"></i></span><div><div class="serif font-bold text-lg text-amber-200">зоркацячэнне</div><div class="text-[13px] text-slate-300">зорка + цячэнне — павольны рух зорак па начным небе</div></div></div>
+          <div class="rounded-2xl bg-white/[.07] border border-white/12 p-4 flex items-center gap-4 hover:bg-white/[.12] transition"><span class="w-12 h-12 shrink-0 rounded-xl grid place-items-center text-xl" style="background:linear-gradient(135deg,#10b981,#0ea5e9)"><i class="fa-solid fa-sun text-white"></i></span><div><div class="serif font-bold text-lg text-amber-200">сонцабег</div><div class="text-[13px] text-slate-300">сонца + бег — імклівы рух сонечнага промня па расе</div></div></div>
+        </div>
+        <div class="mt-4 rounded-2xl border border-amber-300/30 bg-amber-300/10 p-4 text-[13.5px] text-amber-100 flex gap-3"><i class="fa-solid fa-triangle-exclamation text-amber-300 mt-0.5"></i><span><b>Правіла густу:</b> слова павінна быць зразумелым без слоўніка, але здзіўляць. Калі давялося тлумачыць доўга — шукай іншыя карані.</span></div>
+      </div>
+    </div>
+
+    <!-- Перспектывы: задел на будучыню -->
+    <div class="reveal mt-6 rounded-[26px] p-7 sm:p-10 relative overflow-hidden" style="background:linear-gradient(120deg,#0f1a4d 0%,#312e81 55%,#6d28d9 100%);border:1px solid rgba(251,191,36,.3)">
+      <div class="absolute -right-20 -top-20 w-72 h-72 rounded-full opacity-30 blur-3xl" style="background:#fbbf24"></div>
+      <div class="absolute -left-16 -bottom-20 w-64 h-64 rounded-full opacity-25 blur-3xl" style="background:#fb7185"></div>
+      <div class="relative grid lg:grid-cols-[auto_1fr] gap-6 items-center">
+        <div class="flex lg:flex-col gap-3 shrink-0">
+          <span class="w-16 h-16 rounded-2xl grid place-items-center text-3xl text-[#0f1a4d] shadow-xl rotate-[-6deg]" style="background:linear-gradient(135deg,#fde68a,#fb7185)"><i class="fa-solid fa-road"></i></span>
+          <span class="hidden lg:grid w-16 h-16 rounded-2xl place-items-center text-2xl text-white/90 border border-white/15 bg-white/5"><i class="fa-solid fa-book-atlas"></i></span>
+        </div>
+        <div>
+          <div class="text-[12px] font-black uppercase tracking-[0.26em] text-amber-300 mb-2"><i class="fa-solid fa-telescope mr-2"></i>Перспектывы · задел на будучыню</div>
+          <h3 class="serif font-black text-2xl sm:text-3xl leading-snug">Гэта даследаванне — толькі пачатак</h3>
+          <p class="serif italic text-[16px] sm:text-[19px] leading-relaxed text-slate-100 mt-3">«Гэта даследаванне — першая цаглінка ў вялікай сцяне вывучэння паэтонімаў пісьменнікаў Светлагоршчыны. Наперадзе — новыя імёны, новыя творы і новыя адкрыцці».</p>
+          <div class="mt-5 flex flex-wrap gap-2 text-[12.5px] font-bold">
+            <span class="px-3.5 py-2 rounded-full bg-white/10 border border-white/15 text-slate-100"><i class="fa-solid fa-check text-emerald-300 mr-1.5"></i>Крок 1 · Соф'я Шах «Кругаспеў» — выканана</span>
+            <span class="px-3.5 py-2 rounded-full bg-white/5 border border-dashed border-white/25 text-slate-300"><i class="fa-solid fa-hourglass-half text-amber-300 mr-1.5"></i>Крок 2 · іншыя аўтары рэгіёна — наперадзе</span>
+            <span class="px-3.5 py-2 rounded-full bg-white/5 border border-dashed border-white/25 text-slate-300"><i class="fa-solid fa-hourglass-half text-amber-300 mr-1.5"></i>Агульны слоўнік паэтонімаў Светлагоршчыны</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONCLUSION -->
+<section class="py-14 sm:py-20 bg-[#f7f3ff] text-slate-800">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+    <div class="reveal serif italic text-[15px] text-violet-700 tracking-wide mb-3 sonnet-frame inline-block px-8">заключэнне даследавання</div>
+    <p class="reveal serif text-2xl sm:text-[32px] leading-snug font-medium text-[#0f1a4d]">«Вывучэнне аказіяналізмаў Соф'і Шах даказвае: <b>беларуская мова — жывая, гнуткая і бясконца вобразная сістэма</b>, а паэт — той, хто першым чуе яе новыя словы. Гэта першы крок да вялікай карты паэтонімаў пісьменнікаў Светлагоршчыны».</p>
+    <div class="reveal ornament my-8 max-w-md mx-auto"></div>
+    <div class="reveal flex flex-wrap justify-center gap-3">
+      <a href="#hero" class="px-6 py-3 rounded-xl bg-[#0f1a4d] text-white font-bold text-[14px] hover:bg-violet-800 transition"><i class="fa-solid fa-rotate-left mr-2 text-amber-300"></i>Да пачатку</a>
+      <a href="#slounik" class="px-6 py-3 rounded-xl font-bold text-[14px] text-[#0f1a4d] border-2 border-[#0f1a4d]/15 hover:border-amber-400 transition bg-white"><i class="fa-solid fa-book-open mr-2 text-amber-500"></i>Гартаць слоўнік</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="relative text-white overflow-hidden" style="background:linear-gradient(180deg,#070d2b,#0f1a4d 60%,#1a0f2e)">
+  <div class="absolute top-0 left-0 right-0 h-1" style="background:linear-gradient(90deg,#7dd3fc,#7c3aed,#fbbf24,#fb7185)"></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-14 pb-8">
+    <div class="grid lg:grid-cols-[1.2fr_.8fr] gap-8 mb-10">
+      <div>
+        <div class="inline-flex items-center gap-2 glass rounded-full px-4 py-2 text-[12px] font-bold uppercase tracking-[0.22em] text-amber-300 mb-5"><i class="fa-solid fa-award"></i> Удзельнік канферэнцыі</div>
+        <h2 class="serif font-black text-2xl sm:text-3xl leading-snug">Навукова-практычная канферэнцыя <span class="gold-text">навучэнцаў</span></h2>
+        <p class="mt-2 text-slate-300 text-[15px]"><i class="fa-solid fa-tag text-amber-300 mr-2"></i>Даследчая работа па беларускай мове</p>
+        <p class="mt-2 text-slate-400 text-[13.5px]"><i class="fa-solid fa-building-columns text-sky-300 mr-2"></i>Аддзел адукацыі Светлагорскага райвыканкама · ДУА «Сярэдняя школа № 11 г. Светлагорска»</p>
+        <div class="mt-6 grid sm:grid-cols-2 gap-3">
+          <div class="glass rounded-2xl p-5">
+            <div class="text-[11px] font-black uppercase tracking-[0.22em] text-sky-300 mb-2"><i class="fa-solid fa-user-graduate mr-1.5"></i>Аўтар работы</div>
+            <div class="font-bold text-[16px]">Лыжак Цімур Сяргеевіч</div>
+            <div class="text-[13.5px] text-slate-300 mt-1">вучань IX «В» класа<br>ДУА «Сярэдняя школа № 11<br>г. Светлагорска»</div>
+          </div>
+          <div class="glass rounded-2xl p-5">
+            <div class="text-[11px] font-black uppercase tracking-[0.22em] text-amber-300 mb-2"><i class="fa-solid fa-chalkboard-user mr-1.5"></i>Навуковы кіраўнік</div>
+            <div class="font-bold text-[16px]">Міхайлава Дзіна Уладзіміраўна</div>
+            <div class="text-[13.5px] text-slate-300 mt-1">настаўнік беларускай мовы<br>і літаратуры</div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col gap-3">
+        <div class="rounded-2xl p-5 border border-amber-300/25" style="background:linear-gradient(135deg,rgba(251,191,36,.12),rgba(251,113,133,.1))">
+          <div class="text-[11px] font-black uppercase tracking-[0.22em] text-amber-300 mb-2"><i class="fa-solid fa-book mr-1.5"></i>Крыніца даследавання</div>
+          <div class="serif italic text-lg">Зборнік санетаў Соф'і Шах «Кругаспеў» (2006)</div>
+          <div class="text-[13px] text-slate-300 mt-1">21 вянок санетаў · 38 аказіянальных адзінак · аўтарскі слоўнік</div>
+          <div class="mt-3 pt-3 border-t border-white/10 text-[13px] text-slate-300 flex items-center gap-2"><i class="fa-solid fa-location-dot text-amber-300"></i>Светлагорск · 2026 г.</div>
+        </div>
+        <div class="glass rounded-2xl p-5">
+          <div class="text-[11px] font-black uppercase tracking-[0.22em] text-slate-300 mb-3">Навігацыя па старонцы</div>
+          <div class="flex flex-wrap gap-2 text-[13px] font-semibold">
+            <a href="#aktualnasc" class="px-3 py-1.5 rounded-full bg-white/10 hover:bg-amber-300 hover:text-[#0f1a4d] transition">Актуальнасць</a>
+            <a href="#mety" class="px-3 py-1.5 rounded-full bg-white/10 hover:bg-amber-300 hover:text-[#0f1a4d] transition">Мэты</a>
+            <a href="#vyniki" class="px-3 py-1.5 rounded-full bg-white/10 hover:bg-amber-300 hover:text-[#0f1a4d] transition">Лічбы</a>
+            <a href="#sposaby" class="px-3 py-1.5 rounded-full bg-white/10 hover:bg-amber-300 hover:text-[#0f1a4d] transition">Словаўтварэнне</a>
+            <a href="#slounik" class="px-3 py-1.5 rounded-full bg-white/10 hover:bg-amber-300 hover:text-[#0f1a4d] transition">Слоўнік</a>
+            <a href="#maisternia" class="px-3 py-1.5 rounded-full bg-white/10 hover:bg-amber-300 hover:text-[#0f1a4d] transition">Майстэрня</a>
+          </div>
+        </div>
+        <button id="toTop" class="group flex items-center justify-between px-5 py-4 rounded-2xl font-bold text-[#0f1a4d] hover:scale-[1.02] transition" style="background:linear-gradient(135deg,#fde68a,#fbbf24 50%,#fb7185)"><span><i class="fa-solid fa-arrow-up mr-2"></i> Вярнуцца ўверх</span><span class="text-[12px] opacity-70 font-semibold">да зорак і санетаў ✦</span></button>
+      </div>
+    </div>
+    <div class="ornament mb-6 opacity-60"></div>
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-[12.5px] text-slate-400">
+      <span>© 2026 · Светлагорск · «Паэтонімы пісьменнікаў Светлагоршчыны» · першы крок: Соф'я Шах «Кругаспеў»</span>
+      <span class="flex items-center gap-2"><i class="fa-solid fa-heart text-rose-400"></i> З любоўю да беларускага слова · Светлагорск</span>
+    </div>
+  </div>
+</footer>
+
+<!-- floating top -->
+<button id="floatTop" class="fixed bottom-5 right-5 z-50 w-12 h-12 rounded-2xl grid place-items-center text-[#0f1a4d] font-bold shadow-2xl opacity-0 pointer-events-none transition-all duration-300 hover:scale-110" style="background:linear-gradient(135deg,#fde68a,#fb7185)"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script>
+/* ---------- DATA ---------- */
+const DICT = [
+  {w:"Кругаспеў", pos:"наз.", mean:"бесперапынны, замкнёны рух гуку па коле; цыклічная мелодыя свету", type:"складанне"},
+  {w:"Туmanaдым", pos:"наз.", mean:"дыханне туману — вільготны, цяжкі стан світальнага паветра", type:"складанне"},
+  {w:"Гукаўзлёт", pos:"наз.", mean:"рэзкі ўзлёт гуку ўвысь; імгненнае ўзняцце мелодыі", type:"складанне"},
+  {w:"Фарбадзейсныя", pos:"прым.", mean:"такія, у якіх фарба дзейнічае, жыве; актыўны колер", type:"складанне"},
+  {w:"Эйфарыя-мітульга", pos:"наз.", mean:"радасць, што мітусіцца, як матылёк; лёгкая ўзнёслая трывога", type:"складанне"},
+  {w:"Блакітна-сонечна", pos:"прысл.", mean:"адначасова блакітна і сонечна; стан светлавога шчасця", type:"складанне"},
+  {w:"Ачамрэлым", pos:"прым.", mean:"у стане аслупянеласці, здранцвення ад уражання", type:"прэфікс.-суфікс."},
+  {w:"Адсмутнеў", pos:"дзеясл.", mean:"сышоў у смутак, растварыўся ў журбе; перайшоў у стан смутку", type:"прэфіксальны"},
+  {w:"Засутонена", pos:"прым.", mean:"ахоплена змярканнем, ахутана прыцемкамі; душа ў сутоні", type:"прэфікс.-суфікс."},
+  {w:"Бунтоўна", pos:"прысл.", mean:"з духам пратэсту, непакорліва; як бунт", type:"суфіксальны"},
+  {w:"Шчыраўніцы", pos:"наз.", mean:"тыя, хто шчыры да глыбіні душы; носьбіты шчырасці", type:"суфіксальны"},
+  {w:"Спагадны", pos:"прым.", mean:"поўны спагады; здольны да глыбокага суперажывання", type:"суфіксальны"},
+  {w:"Быццёвая", pos:"прым.", mean:"такая, што належыць быццю; глыбінна-быційная", type:"суфіксальны"},
+  {w:"Подціскі", pos:"наз.", mean:"прыглушаная цісканіна, ціск знізу; падсвядомы ціск", type:"прэфіксальны"},
+  {w:"Вымутныя", pos:"прым.", mean:"вырваныя з каламуці; вычышчаныя, прасветленыя", type:"прэфіксальны"},
+  {w:"Немарач", pos:"наз.", mean:"тое, што не ахоплена марай-зданьню; прастора без ілюзій", type:"прэфіксальны"},
+  {w:"Падпужваюць", pos:"дзеясл.", mean:"палохаюць знізу, падсвядома; трывожаць ціха", type:"прэфікс.-суфікс."},
+  {w:"Перадзімны", pos:"прым.", mean:"такі, што перад зімой; напярэдадні халадоў", type:"прэфікс.-суфікс."},
+  {w:"Тне", pos:"дзеясл.", mean:"сціснутае, абрывістае «цягне»; ціск, напружанне без слоў", type:"бяссуфіксны"},
+  {w:"Спрат", pos:"наз.", mean:"спрадвечная спрэчка-спрацованасць; вузел супярэчнасці (кантэкстна)", type:"нявытворны"},
+  {w:"Ветраспеў", pos:"наз.", mean:"спеў ветру; мелодыя, якую нясе вецер (узор майстэрні)", type:"складанне"},
+  {w:"Зоркацячэнне", pos:"наз.", mean:"павольны рух зорак па небе; цячэнне зорнага святла", type:"складанне"},
+  {w:"Сонцабег", pos:"наз.", mean:"імклівы бег сонечнага промня; рух святла", type:"складанне"},
+];
+DICT[1].w = "Туманадым";
+
+const EXAMPLES = {
+  "ex-t1":[
+    ["кругаспеў","замкнёнае кола мелодыі — назва ўсяго зборніка"],
+    ["туманадым","дыханне туману над ракой на світанні"],
+    ["гукаўзлёт","гук, што рэзка ўзлятае ўвысь"],
+    ["фарбадзейсныя","колеры, якія дзейнічаюць, жывуць"],
+    ["эйфарыя-мітульга","радасць-матылёк, што мітусіцца"],
+    ["блакітна-сонечна","неба і сонца ў адным стане"],
+  ],
+  "ex-t2":[
+    ["бунтоўна","прысл. — з духам пратэсту"],
+    ["шчыраўніцы","наз. — людзі глыбокай шчырасці"],
+    ["спагадны","прым. — поўны спагады"],
+    ["быццёвая","прым. — належная быццю"],
+  ],
+  "ex-t3":[
+    ["подціскі","прыглушаны ціск знізу"],
+    ["адсмутнеў","сышоў у смутак, растварыўся ў ім"],
+    ["вымутныя","вырваныя з каламуці, прасветленыя"],
+    ["немарач","прастора без мары-зданні"],
+  ],
+  "ex-t4":[
+    ["падпужваюць","палохаюць ціха, падсвядома"],
+    ["перадзімны","стан напярэдадні зімы"],
+    ["засутонена","душа, ахутаная змярканнем"],
+  ],
+  "ex-t5":[
+    ["тне","сціск, абрыў — гук замест слова"],
+    ["спрат","вузел супярэчнасці, значэнне — з кантэксту"],
+  ]
+};
+
+const WORDS_DAY = [
+  ["туманадым","дыханне туману — вільготны, цяжкі паветраны стан світання"],
+  ["кругаспеў","бясконцы замкнёны рух гуку па коле"],
+  ["гукаўзлёт","рэзкі ўзлёт гуку ўвысь"],
+  ["адсмутнеў","сышоў у смутак, растварыўся ў журбе"],
+  ["блакітна-сонечна","стан, калі неба і сонца — адно"],
+  ["засутонена","ахутана змярканнем, ціхая і задуменная"],
+];
+
+/* ---------- NAV / MENU / PROGRESS ---------- */
+const burger = document.getElementById('burger');
+const mobileMenu = document.getElementById('mobileMenu');
+burger.addEventListener('click',()=>mobileMenu.classList.toggle('hidden'));
+mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobileMenu.classList.add('hidden')));
+
+const progress = document.getElementById('progress');
+const floatTop = document.getElementById('floatTop');
+window.addEventListener('scroll',()=>{
+  const h = document.documentElement;
+  const p = h.scrollTop / (h.scrollHeight - h.clientHeight) * 100;
+  progress.style.width = p + '%';
+  const show = h.scrollTop > 600;
+  floatTop.style.opacity = show ? '1':'0';
+  floatTop.style.pointerEvents = show ? 'auto':'none';
+},{passive:true});
+document.getElementById('toTop').addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+floatTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+/* ---------- PARTICLES ---------- */
+const canvas = document.getElementById('particles');
+const ctx = canvas.getContext('2d');
+let parts = [];
+function resize(){
+  const r = canvas.parentElement.getBoundingClientRect();
+  canvas.width = r.width; canvas.height = r.height;
+}
+resize(); window.addEventListener('resize', resize);
+function initParts(){
+  parts = Array.from({length: Math.min(90, Math.floor(canvas.width/14))},()=>({
+    x: Math.random()*canvas.width, y: Math.random()*canvas.height,
+    r: Math.random()*2.2+.6, s: Math.random()*.5+.15,
+    o: Math.random()*.7+.2, hue: [45,200,280,340][Math.floor(Math.random()*4)],
+    ph: Math.random()*Math.PI*2
+  }));
+}
+initParts(); window.addEventListener('resize', initParts);
+(function loop(t){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  const time = (t||0)/1000;
+  parts.forEach(p=>{
+    p.y -= p.s; p.x += Math.sin(time + p.ph)*.25;
+    if(p.y < -10){p.y = canvas.height+10; p.x = Math.random()*canvas.width;}
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.fillStyle = `hsla(${p.hue},90%,75%,${p.o*.7})`;
+    ctx.shadowBlur = 12; ctx.shadowColor = `hsla(${p.hue},90%,70%,.8)`;
+    ctx.fill(); ctx.shadowBlur = 0;
+  });
+  requestAnimationFrame(loop);
+})();
+
+/* ---------- REVEAL ---------- */
+const io = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* ---------- COUNTERS ---------- */
+const cio = new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting) return;
+  const el = e.target, target = +el.dataset.target; let cur = 0;
+  const step = Math.max(1, Math.round(target/40));
+  const timer = setInterval(()=>{cur+=step; if(cur>=target){cur=target;clearInterval(timer);} el.textContent=cur;},40);
+  cio.unobserve(el);
+}),{threshold:.6});
+document.querySelectorAll('.counter').forEach(el=>cio.observe(el));
+
+/* bars trigger */
+const bio = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');bio.unobserve(e.target);}}),{threshold:.3});
+document.querySelectorAll('#vyniki .glass').forEach(el=>bio.observe(el));
+
+/* ---------- TABS ---------- */
+document.querySelectorAll('.tab-btn').forEach(btn=>btn.addEventListener('click',()=>{
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById(btn.dataset.tab).classList.add('active');
+}));
+
+/* examples render */
+function renderExamples(){
+  Object.entries(EXAMPLES).forEach(([id,arr])=>{
+    const box = document.getElementById(id);
+    if(!box) return;
+    box.innerHTML = arr.map(([w,d])=>`
+      <button class="ex-word text-left rounded-xl bg-white border border-slate-200 px-4 py-3 hover:border-amber-400 hover:shadow-lg hover:shadow-amber-500/10 transition group" data-w="${w}">
+        <span class="serif font-bold text-[16px] text-[#0f1a4d] group-hover:text-amber-600 transition">${w}</span>
+        <span class="block text-[13px] text-slate-500 mt-0.5">${d}</span>
+      </button>`).join('');
+  });
+  document.querySelectorAll('.ex-word').forEach(b=>b.addEventListener('click',()=>{
+    const q = b.dataset.w;
+    document.getElementById('slounik').scrollIntoView({behavior:'smooth'});
+    const inp = document.getElementById('dictSearch');
+    setTimeout(()=>{inp.value=q; renderDict(); inp.focus({preventScroll:true});},600);
+  }));
+}
+renderExamples();
+
+/* ---------- DICTIONARY ---------- */
+const dictList = document.getElementById('dictList');
+const dictSearch = document.getElementById('dictSearch');
+const dictCount = document.getElementById('dictCount');
+let activeFilter = 'all';
+const typeColor = t => t.includes('склад') ? 'bg-amber-100 text-amber-800 border-amber-200' : t.includes('суфікс') && t.includes('прэфікс') ? 'bg-emerald-100 text-emerald-800 border-emerald-200' : t.includes('суфікс') ? 'bg-sky-100 text-sky-800 border-sky-200' : t.includes('прэфікс') ? 'bg-rose-100 text-rose-800 border-rose-200' : 'bg-violet-100 text-violet-800 border-violet-200';
+const posColor = p => p==='наз.' ? 'bg-[#0f1a4d] text-amber-300' : p==='прым.' ? 'bg-violet-600 text-white' : p==='дзеясл.' ? 'bg-emerald-600 text-white' : 'bg-sky-600 text-white';
+
+function renderDict(){
+  const q = dictSearch.value.trim().toLowerCase();
+  const items = DICT.filter(d=>{
+    const okF = activeFilter==='all' || d.pos===activeFilter;
+    const okQ = !q || d.w.toLowerCase().includes(q) || d.mean.toLowerCase().includes(q);
+    return okF && okQ;
+  });
+  dictCount.textContent = `Паказана: ${items.length} з ${DICT.length}`;
+  document.getElementById('dictTotal').textContent = DICT.length;
+  if(!items.length){
+    dictList.innerHTML = `<div class="p-10 text-center text-slate-500"><i class="fa-solid fa-magnifying-glass text-3xl mb-3 block text-slate-300"></i>Нічога не знойдзена. Паспрабуй іншае слова — напрыклад, «спеў» або «туман».</div>`;
+    return;
+  }
+  dictList.innerHTML = items.map(d=>`
+    <div class="dict-row grid md:grid-cols-[220px_150px_1fr_130px] gap-1 md:gap-4 px-5 sm:px-6 py-4 bg-white odd:bg-slate-50/60">
+      <div class="serif font-bold text-[17px] text-[#0f1a4d]">${d.w}</div>
+      <div><span class="inline-block text-[12px] font-bold px-2.5 py-1 rounded-full ${posColor(d.pos)}">${d.pos}</span>
+      <span class="md:hidden ml-2 inline-block text-[11px] font-bold px-2 py-1 rounded-full border ${typeColor(d.type)}">${d.type}</span></div>
+      <div class="text-[14px] text-slate-600 leading-relaxed">${d.mean}</div>
+      <div class="md:text-right"><span class="hidden md:inline-block text-[11px] font-bold px-2.5 py-1 rounded-full border ${typeColor(d.type)}">${d.type}</span></div>
+    </div>`).join('');
+}
+dictSearch.addEventListener('input', renderDict);
+document.querySelectorAll('.dict-filter').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.dict-filter').forEach(x=>{x.classList.remove('bg-amber-300','text-[#0f1a4d]');x.classList.add('bg-white/10','text-white');});
+  b.classList.add('bg-amber-300','text-[#0f1a4d]'); b.classList.remove('bg-white/10','text-white');
+  activeFilter = b.dataset.f; renderDict();
+}));
+renderDict();
+
+/* ---------- WORD OF DAY: плаўная змена ---------- */
+let wdi = 0, swapping = false, wordTimer = null;
+const wEl = document.getElementById('wordOfDay'), wmEl = document.getElementById('wordOfDayMean');
+function showNextWord(){
+  if(swapping || !wEl) return; swapping = true;
+  wEl.classList.add('word-swap'); wmEl.classList.add('word-swap');
+  setTimeout(()=>{
+    wdi = (wdi+1)%WORDS_DAY.length;
+    wEl.textContent = WORDS_DAY[wdi][0];
+    wmEl.textContent = WORDS_DAY[wdi][1];
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{
+      wEl.classList.remove('word-swap'); wmEl.classList.remove('word-swap');
+      setTimeout(()=>{swapping = false;},600);
+    }));
+  },560);
+}
+function restartWordTimer(){ if(wordTimer) clearInterval(wordTimer); wordTimer = setInterval(showNextWord,6000); }
+document.getElementById('shuffleWord').addEventListener('click',()=>{showNextWord(); restartWordTimer();});
+restartWordTimer();
+
+/* ---------- CONSTRUCTOR ---------- */
+const R1 = [["ветр","вецер"],["зорк","зорка"],["сонц","сонца"],["туман","туман"],["гук","гук"],["фарб","фарба"],["круг","круг"],["святл","святло"],["дождж","дождж"],["мар","мара"]];
+const R2 = [["спеў","спеў"],["дым","дыханне"],["лёт","узлёт"],["бег","бег"],["цячэнне","цячэнне"],["святло","ззянне"],["шэпт","шэпт"],["звон","звон"],["палын","гарэнне"],["казка","аповяд"]];
+const MEANS = { "спеў":"мелодыя, якую нясе першы вобраз", "дым":"дыханне і стан паветра", "лёт":"імклівы ўзлёт угору", "бег":"імклівы рух", "цячэнне":"павольны плыўны рух", "святло":"ззянне і святло", "шэпт":"ціхі голас", "звон":"гук-звінеласць", "палын":"гарачае гарэнне", "казка":"чароўны аповяд" };
+let sel1 = 0, sel2 = 0, join = "";
+const box1 = document.getElementById('roots1'), box2 = document.getElementById('roots2');
+function drawRoots(){
+  box1.innerHTML = R1.map((r,i)=>`<button data-i="${i}" class="r1-btn px-3.5 py-2 rounded-xl text-[13px] font-bold border transition ${i===sel1?'bg-[#0f1a4d] text-amber-300 border-[#0f1a4d]':'bg-white border-[#0f1a4d]/20 hover:border-[#0f1a4d]'}">${r[1]}</button>`).join('');
+  box2.innerHTML = R2.map((r,i)=>`<button data-i="${i}" class="r2-btn px-3.5 py-2 rounded-xl text-[13px] font-bold border transition ${i===sel2?'bg-[#0f1a4d] text-amber-300 border-[#0f1a4d]':'bg-white border-[#0f1a4d]/20 hover:border-[#0f1a4d]'}">${r[1]}</button>`).join('');
+  box1.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{sel1=+b.dataset.i; drawRoots(); updateWord();}));
+  box2.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{sel2=+b.dataset.i; drawRoots(); updateWord();}));
+}
+function updateWord(){
+  const w = (R1[sel1][0] + join + R2[sel2][0]).toLowerCase().replace(/ьь/g,'ь');
+  document.getElementById('myWord').textContent = w;
+  document.getElementById('myWordMean').textContent = `${R1[sel1][1]} + ${R2[sel2][1]} — ${MEANS[R2[sel2][0]]||'новы вобраз у стылі Шах'}`;
+}
+document.querySelectorAll('.join-btn').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.join-btn').forEach(x=>{x.classList.remove('bg-[#0f1a4d]','text-white');x.classList.add('bg-white');});
+  b.classList.add('bg-[#0f1a4d]','text-white'); b.classList.remove('bg-white');
+  join = b.dataset.j; updateWord();
+}));
+document.getElementById('randomBtn').addEventListener('click',()=>{
+  sel1 = Math.floor(Math.random()*R1.length); sel2 = Math.floor(Math.random()*R2.length);
+  const js = ["","а","о","-"]; join = js[Math.floor(Math.random()*js.length)];
+  drawRoots(); updateWord();
+});
+drawRoots(); updateWord();
+
+/* ---------- card glow mouse ---------- */
+document.querySelectorAll('.card-glow').forEach(c=>c.addEventListener('mousemove',e=>{
+  const r = c.getBoundingClientRect();
+  c.style.setProperty('--mx', (e.clientX-r.left)+'px');
+  c.style.setProperty('--my', (e.clientY-r.top)+'px');
+}));
+</script>
+</body>
+</html>
